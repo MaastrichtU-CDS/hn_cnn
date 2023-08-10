@@ -13,8 +13,8 @@ In this repository, you'll find the necessary tools to train/validate/test the p
 To train/validate/test the model you can use docker (the necessary docker images are available) and docker-compose. This avoids the need to configure a local environment and guarantees an equal environment to the one used while developing the network.
 
 Docker images:
-- FSL official image:
-- Custom docker image for pre-processing and training the network:
+- FSL official image: `vistalab/fsl-v5.0`
+- Custom docker image for pre-processing and training the network: `pmateus/hn-cnn:1.0.0`
 
 It's also possible to configure a local environment without using docker, directly install the necessary dependencies using the `requirements.txt` file.
 
@@ -44,6 +44,44 @@ In this work, we followed the same data split as previous studies. In this strat
 Addittionally, we evaluated the uncertainity of the model with a 5-fold cross validation strategy. To train the model following this method, configure the `DATA_SPLIT` parameter with `CROSS_VALIDATION`.
 
 ### Training
+
+The current implementation allows to train and evaluate 3 different models:
+- A convolutional neural network (set the `Model` parameter in the configuration to `CNN`)
+- An artificial neural network (set the `Model` parameter in the configuration to `ANN`)
+- A logistic regression (set the `Model` parameter in the configuration to `LR`)
+
+These models can be evaluated by splitting the data following the `COHORT_SPLIT` or cross validation (check previous section).
+
+The additional parameters available are described below:
+- `FOLDS`: Number of folds to use when performing cross validation
+- `TIME_TO_EVENT`: The minimum observation period for a non-event to be included in the training
+- `EVENT`: Event that the network will predict (`DM` - Distant Metastasis, `LRF` - Local-Regional Failure, `OS` - Survival)
+- `HYPERPARAMETERS`: Set of hyperparameters to change from the default ones (check below)
+- `BATCH_SIZE`: the batch size
+- `LOGS_PATH`: Path to store the logs and metrics
+- `CLINICAL_VARIABLES`: State the clinical variables that will be included when training the model
+- `DATA_AUGMENTATION`: Data augmentation techniques to apply
+
+Regarding the hyperparameters employed:
+- `LEARNING_RATE`: the learning rate (default: 0.05)
+- `EPOCHS`: number of epochs
+- `MOMENTUM`: momentum
+- `DAMPENING`: dampening (default: 0.00)
+- `RELU_SLOPE`: slope for the RELU function (default: 0.10)
+- `WEIGHTS_DECAY`: weight decay (L2 penalty) (default: 0.0001)
+- `OPTIMIZER`: (optimizer used, default: SGD - https://pytorch.org/docs/stable/generated/torch.optim.SGD.html)
+- `CLASS_WEIGHTS`: weights for each class in the loss function (default: [0.7, 3.7])
+
+Regarding the data augmentation techniques:
+- `HORIZONTAL_FLIP`: by default a probability of 0.5
+- `VERTICAL_FLIP`: by default a probability of 0.5
+- `ROTATE_90`: randomly rotate the image 90 degrees 1-3 times, by default a probability of 0.75
+- `ROTATION`: randomly rotate the image a certain number of degrees, by default maximum 10 degrees
+
+The training scripts allow to set up the necessary seeds in order to make the results fully reproducible:
+- the random seed for python (`random.seed()`)
+- the random seed for the data split, only necessary when performing cross-validation (`StratifiedKFold`)
+- the random seed for the pytorch library (`torch.manual_seed()`)
 
 ## Citation
 
