@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  preprocessing:
+    image: vistalab/fsl-v5.0
+    volumes:
+      - fsl_script.sh:/mnt/fsl_script.sh
+      - ./niftis:/mnt/input
+      - output_folder:/mnt/output
+    command: bash

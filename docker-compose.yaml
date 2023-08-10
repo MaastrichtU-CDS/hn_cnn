@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  hn-cnn:
+    image: pmateus/hn-cnn:1.0.0
+    environment:
+      TRAIN_CLINICAL_DATA_PATH: /mnt/data
+    volumes:
+      - ./path/to/data:/mnt/data
+      - ./training.py:/mnt/training.py
+    entrypoint: /bin/bash
