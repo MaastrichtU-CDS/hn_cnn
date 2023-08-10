@@ -1,0 +1,10 @@
+id;sex;age;site;tstage;nstage;mstage;groupstage;overall_hpv_status;time1;time2;time3;time4;time5;therapy;surgery;Time - diagnosis to last follow-up(days);Locoregional;Distant;Death;pixel;vol;area;Time - diagnosis to LR (days);Time - diagnosis to DM (days);Time - diagnosis to Death (days)
+HN-CHUM-001;M;82;Oropharynx;T2;N2;M0;Stage IV;N/A;0;9;TBD;53;102;chemo radiation;N/A;1806;0;0;0;9424;29719.06836;733.3748331;;;
+HN-CHUM-003;M;56;unknown;Tx;N2;M0;N/A;N/A;0;46;TBD;88;136;chemo radiation;N/A;1841;0;0;0;10864;33879.51563;518.7983215;;;
+HN-HGJ-001;M;79;Larynx;T3;N0;M0;stage III;-;0;71;64;97;140;chemo radiation;0;2123;1;0;0;2630;8201.686523;1040.95459;692;;
+HN-HGJ-002;M;41;Nasopharynx;T1;N1;M0;stage IIB;-;0;37;35;63;108;chemo radiation;0;2114;1;0;0;17404;54274.58594;1232.146014;918;;
+HN-HGJ-003;M;75;Larynx;T3;N2b;M0;stage IVA;N/A;0;49;51;65;113;chemo radiation;0;1098;1;1;1;15817;49325.50391;432.5866699;441;441;1098
+HN-HMR-002;M;56;Hypopharynx;T4b;N2c;M0;stage IVB;N/A;0;-9;20;39;88;chemo radiation;N/A;194;0;1;1;18448;112759.6016;411.9869024;;138;195
+HN-HMR-005;M;67;Oropharynx;T4a;N2b;M0;stage IVA;N/A;0;42;81;102;151;chemo radiation;N/A;1964;0;1;1;47579;148375.6719;1639.709473;;1071;2044
+HN-CHUS-001;M;66;Larynx;T2;N0;M0;Stade II;N/A;0;41;41;59;109;radiation;N/A;2442;0;0;0;691;2846.832275;1314.161925;;;
+HN-CHUS-005;M;63;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;29;TBD;48;100;chemo radiation;N/A;2165;0;0;0;7628;31426.39063;101.0893788;;;
