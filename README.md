@@ -21,7 +21,7 @@ It's also possible to configure a local environment without using docker, direct
 ## Data pre-processing
 
 The pre-processing pipeline developed consisted of:
-1. Converting the imaging data (DICOM CT scans and DICOM RT STRUCT) to NIFTIs (dcmrtstruct2nii)
+1. Converting the imaging data (DICOM CT scans and DICOM RT STRUCT) to NIFTIs (using `dcmrtstruct2nii` library)
 2. Apply the GTV mask to the NIFTI (FSL)
 3. Cropping around the tumor region
 4. Smoothing and windowing of the Hounsfield units (HU)
