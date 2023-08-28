@@ -32,9 +32,9 @@ DATA = {
 CONFIGURATIONS = {
     MODEL: CNN,
     DATA_SPLIT: COHORT_SPLIT,
-    FOLDS: 2,
+    # FOLDS: 2,
     TIME_TO_EVENT: 2 * 365,
-    EVENT: DM,
+    EVENT: LRF,
     HYPERPARAMETERS: {
         # Include any hypeparameters that you want to change
         # from the default ones:
@@ -42,25 +42,28 @@ CONFIGURATIONS = {
         #EPOCHS: 5,
     },
     BATCH_SIZE: 64,
-    LOGS_PATH: "/mnt/temporary/log.txt",
+    LOGS_PATH: "./logs/log_lrf.txt",
     # Leave empty to train the network without clinical data
     CLINICAL_VARIABLES: [],
     DATA_AUGMENTATION: {},
+    STORE_MODEL: {
+        MODEL_ID: "lrf",
+        MODEL_PATH: "./backup",
+        THRESHOLD: 0.7,
+        MAX_DIFFERENCE: 0.03,
+    }
 }
 
 # Set the seeds
 # 1) Global python seed
 # random_seed = random.randint(..., ...)
 # print(f"Random seed: {random_seed}")
-random_seed = 7651962
-random.seed(random_seed)
+random.seed(2473259)
 # 2) Random split seed
 # random_seed_split = random.randint(..., ...)
-random_seed_split = 0
+random_seed_split = random.randint(0, 9174937)
 # 3) Random seed torch
-# random_seed_torch = random.randint(..., ...)
-random_seed_torch = 775135
-torch.manual_seed(random_seed_torch)
+torch.manual_seed(2970264)
 
 if CONFIGURATIONS[DATA_SPLIT] == COHORT_SPLIT:
     # Store the model training logs in a file
@@ -110,6 +113,7 @@ if CONFIGURATIONS[DATA_SPLIT] == COHORT_SPLIT:
                 model,
                 dataloaders,
                 parameters=CONFIGURATIONS[HYPERPARAMETERS],
+                store_model=CONFIGURATIONS[STORE_MODEL],
             )
 elif CONFIGURATIONS[DATA_SPLIT] == CROSS_VALIDATION:
     kfold = StratifiedKFold(n_splits=CONFIGURATIONS[FOLDS], shuffle=True, random_state=random_seed_split)
@@ -162,4 +166,5 @@ elif CONFIGURATIONS[DATA_SPLIT] == CROSS_VALIDATION:
                         model,
                         dataloaders,
                         parameters=CONFIGURATIONS[HYPERPARAMETERS],
+                        store_model=CONFIGURATIONS[STORE_MODEL],
                     )
