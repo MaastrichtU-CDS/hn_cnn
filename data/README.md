@@ -7,7 +7,7 @@ We conducted the experiments in a distributed computing platform using the docke
 ### Content
 
 - `canada.csv` and `maastro.csv`: contain the clinical data necessary for training the network
-- `training_example_{}.py`: contains the code to train the network (includes the seed used for the study) - dm (Distant metastasis); lrf (Loco-regional failure); os - Overall survival
+- `training_example_{}.py`: contains the code to train the network (includes the seed used for the study) - dm (Distant metastasis); lrf (Loco-regional failure); os (Overall survival)
 - `pre-processed`: the imaging input to the network (already pre-processed according to the pipeline described in the Methods)
 - `seeds.xlsx`: the seeds used in each experiment
 
