@@ -96,7 +96,7 @@ def fit(model, data_loaders, parameters={}, store_model={}):
                 output.append(metrics)
                 if store_model[MODEL_PATH] and metrics[VALIDATION][ROC][AUC] > best_val_auc \
                     and metrics[VALIDATION][ROC][AUC] > store_model.get(THRESHOLD, 0) \
-                        and abs(metrics[VALIDATION][ROC][AUC] - metrics[VALIDATION][ROC][AUC]) < \
+                        and abs(metrics[VALIDATION][ROC][AUC] - metrics[TRAIN_METRICS][ROC][AUC]) < \
                             store_model.get(MAX_DIFFERENCE, 1):
                     save_model(
                         store_model[MODEL_PATH],

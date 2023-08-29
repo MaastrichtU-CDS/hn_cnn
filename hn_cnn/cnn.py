@@ -78,9 +78,10 @@ class ImageClassificationBase(nn.Module):
 class HNCNN(ImageClassificationBase):
     """ Implementation of the CNN to predict outcomes
     """
-    def __init__(self, base_number_filters=8, leaky_relu_slope=0.01, clinical_data=[]):
+    def __init__(self, base_number_filters=8, leaky_relu_slope=0.01, clinical_data=False):
         super().__init__()
-        self.clinical_data = len(clinical_data) > 0
+        #self.clinical_data = len(clinical_data) > 0
+        self.clinical_data = clinical_data
         # self.lr = nn.ReLU()
         self.lr = nn.LeakyReLU(negative_slope=leaky_relu_slope)
         # Convolutional layer 1
@@ -100,7 +101,8 @@ class HNCNN(ImageClassificationBase):
         self.ln3 = nn.Linear(8 * base_number_filters, 4 * base_number_filters)
         self.dp3 = nn.Dropout(0.1)
         # Last activation layer
-        clinical_neurons = len(clinical_data)
+        #clinical_neurons = len(clinical_data)
+        clinical_neurons = 11
         self.ln4 = nn.Linear(4 * base_number_filters + clinical_neurons, 1)
         self.act = nn.Sigmoid()
 
@@ -123,12 +125,14 @@ class HNCNN(ImageClassificationBase):
 class HNANN(ImageClassificationBase):
     """ Implementation of the ANN to predict outcomes
     """
-    def __init__(self, leaky_relu_slope=0.01):
+    def __init__(self, leaky_relu_slope=0.01, clinical_data=None):
         super().__init__()
         # self.lr = nn.ReLU()
+        #clinical_neurons = len(clinical_data)
+        clinical_neurons = 11
         self.lr = nn.LeakyReLU(negative_slope=leaky_relu_slope)
         # Fully connected Layers
-        self.ln1 = nn.Linear(11, 8)
+        self.ln1 = nn.Linear(clinical_neurons, 8)
         self.dp1 = nn.Dropout(0.125)
         self.ln2 = nn.Linear(8, 4)
         self.dp2 = nn.Dropout(0.1)
@@ -144,7 +148,7 @@ class HNANN(ImageClassificationBase):
 class HNLR():
     """ Implementation of the Logistic Regression model
     """
-    def __init__(self):
+    def __init__(self, clinical_data=None):
         self.model = LogisticRegression()
 
     def training(self, batch, regularization=10**-2, class_weights=[1.0, 1.0]):
