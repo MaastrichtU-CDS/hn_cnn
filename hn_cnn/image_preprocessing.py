@@ -90,8 +90,8 @@ def process_scan(
         mask_slice = np.where(mask_slice > 0.1, 1, 0)
 
     ct_slice = np.where(mask_slice == 0, 0, ct_slice)
-    #ct_slice = crop_scan(ct_slice, int(xm*factor[0]), int(hm*factor[1]), crop_dim)
-    #mask_slice = crop_scan(mask_slice, int(xm*factor[0]), int(hm*factor[1]), crop_dim)
+    ct_slice = crop_scan(ct_slice, int(xm*factor[0]), int(hm*factor[1]), crop_dim)
+    mask_slice = crop_scan(mask_slice, int(xm*factor[0]), int(hm*factor[1]), crop_dim)
 
     ct_slice = ((ct_slice - min_interval)/(max_interval - min_interval)) * 255
     ct_slice = np.where(ct_slice > 255, 0, ct_slice)

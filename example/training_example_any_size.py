@@ -80,6 +80,9 @@ if CONFIGURATIONS[DATA_SPLIT] == COHORT_SPLIT:
         TRANSFORM_TO_TENSOR,
         timeframe=CONFIGURATIONS[TIME_TO_EVENT],
         event=CONFIGURATIONS[EVENT],
+        preprocess=True,
+        mask_path=DATA[TRAIN][MASKS_PATH],
+        mask_suffix=DATA[TRAIN][MASK_SUFFIX],
     )
     with open(file_path, "w") as o:
         with contextlib.redirect_stdout(o):

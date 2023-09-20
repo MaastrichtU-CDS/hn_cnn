@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+  hn-cnn:
+    image: pmateus/hn-cnn:1.1.0
+    environment:
+      TRAIN_CLINICAL_DATA_PATH: /mnt/data/canada.csv
+      TRAIN_SCANS_PATH: /mnt/data/canada
+      VALIDATION_CLINICAL_DATA_PATH: /mnt/data/canada.csv
+      VALIDATION_SCANS_PATH: /mnt/data/canada
+      TESTING_CLINICAL_DATA_PATH: /mnt/data/maastro.csv
+      TESTING_SCANS_PATH: /mnt/data/maastro
+    volumes:
+      - ./CT_NIFTI:/mnt/CT_NIFTI
+      - ./canada.csv:/mnt/data/canada.csv
+      - ./maastro.csv:/mnt/data/maastro.csv
+      - ./training_example_any_size.py:/mnt/training.py
+      - ./logs:/mnt/logs
+    entrypoint: /bin/bash
