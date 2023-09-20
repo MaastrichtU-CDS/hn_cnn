@@ -14,6 +14,43 @@ from  hn_cnn.data_augmentation import get_training_augmentation, TRANSFORM_TO_TE
 from hn_cnn.fit import fit
 from hn_cnn.parse_data import ImageDataset
 
+# Configure the paths to each suubset
+DATA = {
+    TRAIN: {
+        CLINICAL_DATA_PATH: os.getenv(f"{TRAIN}_{CLINICAL_DATA_PATH}"),
+        SCANS_PATH: os.getenv(f"{TRAIN}_{SCANS_PATH}"),
+    },
+    VALIDATION: {
+        CLINICAL_DATA_PATH: os.getenv(f"{VALIDATION}_{CLINICAL_DATA_PATH}"),
+        SCANS_PATH: os.getenv(f"{VALIDATION}_{SCANS_PATH}"),
+    },
+    TESTING: {
+        CLINICAL_DATA_PATH: os.getenv(f"{TESTING}_{CLINICAL_DATA_PATH}"),
+        SCANS_PATH: os.getenv(f"{TESTING}_{SCANS_PATH}"),
+    }
+}
+
+# Configure the network parameters
+CONFIGURATIONS = {
+    MODEL: LR,
+    DATA_SPLIT: COHORT_SPLIT,
+    FOLDS: 2,
+    TIME_TO_EVENT: 2 * 365,
+    EVENT: DM,
+    HYPERPARAMETERS: {
+        # Include any hypeparameters that you want to change
+        # from the default ones:
+        LEARNING_RATE: 0.05,
+        EPOCHS: 5,
+    },
+    BATCH_SIZE: 64,
+    LOGS_PATH: "/mnt/log.txt",
+    # Leave empty to train the network without clinical data
+    CLINICAL_VARIABLES: [],
+    DATA_AUGMENTATION: {},
+}
+
+
 def run_network(folders, config, ids):
     """ Run the network according to the configuration provided
         - folders: paths to the folders for training, validation, and testing
@@ -27,7 +64,7 @@ def run_network(folders, config, ids):
     folders[TRAIN_METRICS] = folders[TRAIN]
     is_neural_network = config[MODEL] in [CNN, ANN]
     for dataset in [TRAIN, TRAIN_METRICS, VALIDATION, TESTING]:
-        paths = DATA[dataset]
+        paths = folders[dataset]
         dataset_ids = ids[dataset]
         is_training = (dataset == TRAIN)
         dataset_parsed = ImageDataset(
@@ -57,40 +94,6 @@ def run_network(folders, config, ids):
         parameters=config[HYPERPARAMETERS],
     )
     return history
-
-DATA = {
-    TRAIN: {
-        CLINICAL_DATA_PATH: os.getenv(f"{TRAIN}_{CLINICAL_DATA_PATH}"),
-        SCANS_PATH: os.getenv(f"{TRAIN}_{SCANS_PATH}"),
-    },
-    VALIDATION: {
-        CLINICAL_DATA_PATH: os.getenv(f"{VALIDATION}_{CLINICAL_DATA_PATH}"),
-        SCANS_PATH: os.getenv(f"{VALIDATION}_{SCANS_PATH}"),
-    },
-    TESTING: {
-        CLINICAL_DATA_PATH: os.getenv(f"{TESTING}_{CLINICAL_DATA_PATH}"),
-        SCANS_PATH: os.getenv(f"{TESTING}_{SCANS_PATH}"),
-    }
-}
-
-CONFIGURATIONS = {
-    MODEL: LR,
-    DATA_SPLIT: COHORT_SPLIT,
-    FOLDS: 2,
-    TIME_TO_EVENT: 2 * 365,
-    EVENT: DM,
-    HYPERPARAMETERS: {
-        # Include any hypeparameters that you want to change
-        # from the default ones:
-        LEARNING_RATE: 0.05,
-        EPOCHS: 5,
-    },
-    BATCH_SIZE: 64,
-    LOGS_PATH: "/mnt/log.txt",
-    # Leave empty to train the network without clinical data
-    CLINICAL_VARIABLES: [],
-    DATA_AUGMENTATION: {},
-}
 
 # Set the seeds
 # 1) Global python seed
