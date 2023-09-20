@@ -5,6 +5,7 @@ from PIL import Image
 import torch
 
 from hn_cnn.constants import *
+from hn_cnn.image_preprocessing import process_scan
 
 # Mapping for the clinical data
 # Include each variable: Primary Site, T-stage, N-stage, ...
@@ -152,7 +153,18 @@ def parse_event(tabular, event):
 class ImageDataset(torch.utils.data.Dataset):
     """Class to read, transform, and provide the data to the CNN"""
 
-    def __init__(self, dataset_path, scans_path, transforms, ids_to_use=[], timeframe=2*365, event="dm"):
+    def __init__(
+            self,
+            dataset_path,
+            scans_path,
+            transforms,
+            ids_to_use=[],
+            timeframe=2*365,
+            event="dm",
+            preprocess=False,
+            mask_path=None,
+            mask_suffix=None,
+        ):
         # Read the dataset
         self.tabular = pd.read_csv(dataset_path, delimiter=';')
         # Extract the information
@@ -166,7 +178,13 @@ class ImageDataset(torch.utils.data.Dataset):
             id = tb[ID]
             if (len(ids_to_use) == 0 or id in ids_to_use) and \
                 (event_info[FU] >= timeframe or event_info[EVENT] == 1):
-                    self.images[id] = Image.open(f"{scans_path}/{id}.png")
+                    if preprocess and mask_path:
+                        self.images[id] = process_scan(
+                            scan_path=f"{scans_path}/{id}.nii.gz",
+                            mask_path=f"{mask_path}/{id}{mask_suffix}.nii.gz",
+                        )
+                    else:
+                        self.images[id] = Image.open(f"{scans_path}/{id}.png")
                     self.tab_data[id] = parse_clinical(tb)
                     self.keys.append(id)
                     self.y.append(
