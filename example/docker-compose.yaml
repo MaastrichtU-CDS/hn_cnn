@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   hn-cnn:
-    image: pmateus/hn-cnn:1.0.0
+    image: pmateus/hn-cnn:1.1.0
     environment:
       TRAIN_CLINICAL_DATA_PATH: /mnt/data/canada.csv
       TRAIN_SCANS_PATH: /mnt/data/canada
