@@ -12,7 +12,6 @@ services:
       TESTING_SCANS_PATH: /mnt/data/maastro
     volumes:
       - ./CT_PREPROCESSED:/mnt/data
-      - ./canada.csv:/mnt/data/canada.csv
-      - ./maastro.csv:/mnt/data/maastro.csv
       - ./training_example.py:/mnt/training.py
+      - ./logs:/mnt/logs
     entrypoint: /bin/bash

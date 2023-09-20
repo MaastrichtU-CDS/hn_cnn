@@ -102,7 +102,7 @@ class HNCNN(ImageClassificationBase):
         self.dp3 = nn.Dropout(0.1)
         # Last activation layer
         #clinical_neurons = len(clinical_data)
-        clinical_neurons = 11
+        clinical_neurons = 11 if clinical_data else 0
         self.ln4 = nn.Linear(4 * base_number_filters + clinical_neurons, 1)
         self.act = nn.Sigmoid()
 

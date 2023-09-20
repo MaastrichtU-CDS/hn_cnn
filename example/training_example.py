@@ -102,7 +102,9 @@ if CONFIGURATIONS[DATA_SPLIT] == COHORT_SPLIT:
             shuffle = is_training,
             drop_last = is_training,
         )
-    model = MODELS[CONFIGURATIONS[MODEL]]()
+    model = MODELS[CONFIGURATIONS[MODEL]](
+        clinical_data=CONFIGURATIONS.get(CLINICAL_VARIABLES),
+    )
     print(model)
     # Print a summary of the model
     # summary(NaturalSceneClassification(), (1, 180, 180))
@@ -154,7 +156,9 @@ elif CONFIGURATIONS[DATA_SPLIT] == CROSS_VALIDATION:
                     drop_last = is_training,
                 )
 
-            model = MODELS[CONFIGURATIONS[MODEL]]()
+            model = MODELS[CONFIGURATIONS[MODEL]](
+                clinical_data=CONFIGURATIONS.get(CLINICAL_VARIABLES),
+            )
             print(model)
             # Print a summary of the model
             # summary(NaturalSceneClassification(), (1, 180, 180))
