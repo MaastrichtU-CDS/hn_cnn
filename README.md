@@ -2,6 +2,15 @@
 
 Image based prognosis in head and neck cancer using convolutional neural networks: a case study in reproducibility and optimization.
 
+- [Convolutional Neural Network (CNN) for head and neck outcome classification](#convolutional-neural-network-cnn-for-head-and-neck-outcome-classification)
+  - [Description](#description)
+  - [Requirements](#requirements)
+  - [Data pre-processing](#data-pre-processing)
+  - [Running the model](#running-the-model)
+    - [Data split](#data-split)
+    - [Training](#training)
+  - [Citation](#citation)
+
 ## Description
 
 In this work, we evaluated the reproducility of proposed Convolutional Neural Networks for head and neck cancer prognosis.
