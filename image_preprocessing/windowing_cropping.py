@@ -56,7 +56,10 @@ def process_scan(
     spacing=[1.0, 1.0]
 ):
     print(f"Processing scan {scan_path}")
-    # Load the CT and mask
+    # Load the CT and the mask resulting from the FSL pre-processing
+    # This previous step (./convert_dicom.py) will:
+    # - reorient the CT and mask (fslreorient2std)
+    # - apply the mask to the CT (fslmaths -mas)
     scan = nib.load(os.path.join(SCANS_PATH, scan_path))
     mask = nib.load(os.path.join(MASKS_PATH, scan_path.split(".")[0] + msk_prefix))
     # Check the Dicom information
@@ -65,6 +68,8 @@ def process_scan(
     pixels_by_slice = []
     # Select the slice to use (largest tumor area)
     for i in range(mask.shape[2]):
+        # Apply the HU window before selecting the CT slice to maximize the 
+        # information available
         scan_data_filter = np.where(
             scan_data[:, :, i] < min_interval, 0, scan_data[:, :, i]
         )
@@ -73,6 +78,7 @@ def process_scan(
         )
     ct_slice_idx = np.argmax(pixels_by_slice)
     print(f"Chosen slice {ct_slice_idx} ({pixels_by_slice[np.argmax(pixels_by_slice)]})")
+    # Retrieve the chosen slice
     ct_slice = scan_data[:, :, ct_slice_idx]
     mask_slice = mask.get_fdata()[:, :, ct_slice_idx]
     # Apply a gaussian filter
@@ -90,9 +96,10 @@ def process_scan(
         mask_slice = np.where(mask_slice > 0.1, 1, 0)
 
     ct_slice = np.where(mask_slice == 0, 0, ct_slice)
+    # Crop the scan and mask
     ct_slice = crop_scan(ct_slice, int(xm*factor[0]), int(hm*factor[1]), crop_dim)
     mask_slice = crop_scan(mask_slice, int(xm*factor[0]), int(hm*factor[1]), crop_dim)
-
+    # HU windowing
     ct_slice = ((ct_slice - min_interval)/(max_interval - min_interval)) * 255
     ct_slice = np.where(ct_slice > 255, 0, ct_slice)
     ct_slice = np.where(ct_slice <= 0, 0, ct_slice)

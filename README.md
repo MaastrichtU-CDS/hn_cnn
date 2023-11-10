@@ -32,10 +32,16 @@ It's also possible to configure a local environment without using docker, direct
 
 The pre-processing pipeline developed consisted of:
 1. Converting the imaging data (DICOM CT scans and DICOM RT STRUCT) to NIFTIs (using `dcmrtstruct2nii` library)
-2. Apply the GTV mask to the NIFTI (FSL)
-3. Cropping around the tumor region
+2. Reorient the scans and apply the GTV mask to the NIFTI (FSL)
+3. Slice selection* and cropping around the tumor region
 4. Smoothing and windowing of the Hounsfield units (HU)
 5. Transformation to a png format with 256 values (the input for the network)
+
+For step 1 and 2 we provide the script `image_preprocesing/convert_dicom.py`: it takes as input a csv file identifying the CT scans for each patient, transforms the scans to NIFTI, and prints the FSL commands that allow to subtact the mask to scan. After running this script, configure the `image_preprocesing/docker-compose.yaml` file with the correct data folders and run the FSL commands stored in the `fsl_script.sh` script.
+
+For step 3, 4, and 5, we provide the script `image_preprocesing/windowing_cropping.py`: the input should be the results from the FSL pre-processing (the masked CT scans `{scan_id}_im.nii.gz` and the masks `{scan_id}_mask.nii.gz`). This script will output the png images that can be used to train or test the CNN.
+
+<sub>*we used the masked CT scan (obtained in step 2), applied the HU window (-50 to 300), and selected the slice with largest area (based on the number of non-zero values)<sub>
 
 ## Running the model
 
