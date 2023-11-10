@@ -9,6 +9,7 @@ Image based prognosis in head and neck cancer using convolutional neural network
   - [Running the model](#running-the-model)
     - [Data split](#data-split)
     - [Training](#training)
+    - [Reproducibility](#reproducibility)
   - [Citation](#citation)
 
 ## Description
@@ -23,7 +24,7 @@ To train/validate/test the model you can use docker (the necessary docker images
 
 Docker images:
 - FSL official image: `vistalab/fsl-v5.0`
-- Custom docker image for pre-processing and training the network: `pmateus/hn-cnn:1.0.0`
+- Custom docker image for pre-processing and training the network: `pmateus/hn-cnn:1.2.0`
 
 It's also possible to configure a local environment without using docker, directly install the necessary dependencies using the `requirements.txt` file.
 
@@ -87,10 +88,25 @@ Regarding the data augmentation techniques:
 - `ROTATE_90`: randomly rotate the image 90 degrees 1-3 times, by default a probability of 0.75
 - `ROTATION`: randomly rotate the image a certain number of degrees, by default maximum 10 degrees
 
+### Reproducibility
+
 The training scripts allow to set up the necessary seeds in order to make the results fully reproducible:
 - the random seed for python (`random.seed()`)
 - the random seed for the data split, only necessary when performing cross-validation (`StratifiedKFold`)
 - the random seed for the pytorch library (`torch.manual_seed()`)
+
+When reproducing the results from the manuscript (using the seeds provided in this repository), 
+please include the following in the training script (as exemplified in `/data/models/training_example_dm.py`):
+
+```python
+random.seed()
+# Include the next line:
+random_seed_split = random.randint(0, 9174937)
+torch.manual_seed()
+```
+
+Finally, the scripts provided in the folder `/data/models` already include all the necessary configurations 
+to reproduce our results for the prediction of each outcome.
 
 ## Citation
 

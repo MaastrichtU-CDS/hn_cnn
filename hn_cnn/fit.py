@@ -15,6 +15,8 @@ DEFAULT_HYPERPARAMETERS = {
     CLASS_WEIGHTS: [0.7, 3.7],
 }
 
+DEFAULT_STOP_THRESHOLD = 0.95
+
 @torch.no_grad()
 def evaluate(model, val_loader, weights):
     model.eval()
@@ -94,7 +96,7 @@ def fit(model, data_loaders, parameters={}, store_model={}):
                         print(subset)
                         print(subset_metrics)
                 output.append(metrics)
-                if store_model[MODEL_PATH] and metrics[VALIDATION][ROC][AUC] > best_val_auc \
+                if store_model.get(MODEL_PATH) and metrics[VALIDATION][ROC][AUC] > best_val_auc \
                     and metrics[VALIDATION][ROC][AUC] > store_model.get(THRESHOLD, 0) \
                         and abs(metrics[VALIDATION][ROC][AUC] - metrics[TRAIN_METRICS][ROC][AUC]) < \
                             store_model.get(MAX_DIFFERENCE, 1):
@@ -107,7 +109,9 @@ def fit(model, data_loaders, parameters={}, store_model={}):
                         model_id=store_model[MODEL_ID] or str(type(model))
                     )
                     best_val_auc = metrics[VALIDATION][ROC][AUC]
-                if metrics[TRAIN_METRICS][ROC][AUC] > store_model.get(STOP_THRESHOLD, 0.95):
+                stop_threshold = store_model.get(STOP_THRESHOLD, DEFAULT_STOP_THRESHOLD)
+                if metrics[TRAIN_METRICS][ROC][AUC] > stop_threshold:
+                    print(f"Early stop: validation AUC above {stop_threshold}")
                     break 
 
     return output
