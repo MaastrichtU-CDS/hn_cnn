@@ -11,6 +11,7 @@ Image based prognosis in head and neck cancer using convolutional neural network
     - [Data split](#data-split)
     - [Training](#training)
     - [Reproducibility](#reproducibility)
+  - [Results](#results)
   - [Citation](#citation)
 
 ## Description
@@ -140,6 +141,30 @@ torch.manual_seed()
 
 Finally, the scripts provided in the folder `/data/models` already include all the necessary configurations 
 to reproduce our results for the prediction of each outcome.
+
+## Results
+
+Performance results using only imaging data:
+
+| Outcome   |     Validation AUC (CI 95%)      | Test AUC (CI 95%) |  Model |
+|----------|:-------------:|-------------:|---------------------:|
+| DM |  0.89 [0.81, 0.96] | 0.89 [0.79, 0.98] | ./data/models/model_dm_689.pth.tar |
+| LRF |    0.77 [0.58, 0.92]   | 0.77 [0.58, 0.92] |   ./data/models/model_lrf_2340.pth.tar |
+| OS | 0.80 [0.66, 0.91] | 0.67 [0.57, 0.77] |    ./data/models/model_os_1341.pth.tar |
+
+Performance results using imaging and clinical data:
+
+| Outcome  |     Validation AUC (CI 95%)      | Test AUC (CI 95%) |  Model |
+|----------|:-------------:|-------------:|---------------------:|
+| DM |  0.89 [0.79, 0.98] | 0.93 [0.86, 0.99] | ./data/models/with_clinical_data/model_dm_cd_646.pth.tar |
+| LRF |    0.70 [0.54, 0.84]   | 0.59 [0.47, 0.70] |   ./data/models/with_clinical_data/model_lrf_cd_964.pth.tar |
+| OS | 0.74 [0.58, 0.86] | 0.69 [0.59, 0.79] |    ./data/models/with_clinical_data/model_os_cd_2445.pth.tar |
+
+Training set: [HGJ and CHUS](https://doi.org/10.7937/K9/TCIA.2017.8oje5q00)
+Validation set: [HMR and CHUS](https://doi.org/10.7937/K9/TCIA.2017.8oje5q00)
+Testing set: [Maastro](https://doi.org/10.7937/tcia.2019.8kap372n)
+
+For more information check the [publication](https://doi.org/10.1038/s41598-023-45486-5).
 
 ## Citation
 
