@@ -7,6 +7,7 @@ Image based prognosis in head and neck cancer using convolutional neural network
   - [Requirements](#requirements)
   - [Data pre-processing](#data-pre-processing)
   - [Running the model](#running-the-model)
+    - [Example](#example)
     - [Data split](#data-split)
     - [Training](#training)
     - [Reproducibility](#reproducibility)
@@ -46,6 +47,28 @@ For step 3, 4, and 5, we provide the script `image_preprocesing/windowing_croppi
 ## Running the model
 
 The script './training.py' provides the base to train and evaluate the model under different configurations.
+To run the model, make sure to:
+- (Using Docker) Set the path to the data folder in the docker-compose file.
+- Set the path for the training, validation, and testing sets in the './training.py' script (check the example script under './example'):
+```python
+DATA = {
+    TRAIN: {
+        CLINICAL_DATA_PATH: "",
+        SCANS_PATH: "",
+    },
+    VALIDATION: {
+        CLINICAL_DATA_PATH: "",
+        SCANS_PATH: "",
+    },
+    TESTING: {
+        CLINICAL_DATA_PATH: "",
+        SCANS_PATH: "",   
+    }
+}
+```
+
+### Example
+
 In './example' you can find a small subset of images to test the network training:
 - In the terminal: `docker-compose run hn-cnn`
 - Once in the container's terminal: `cd /mnt`
