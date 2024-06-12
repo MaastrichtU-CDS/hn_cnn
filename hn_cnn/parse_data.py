@@ -68,6 +68,8 @@ CLINICAL_DATA = {
         }
     },
     VOLUME: {
+        # To calculate the volume we used FSL:
+        # /usr/share/fsl/5.0/bin/fslstats /path/to/masks/{mask_id}_mask.nii.gz -V
         KEY: "vol",
         THRESHOLDS: {
             "vol0": [0, 11000],
@@ -77,6 +79,9 @@ CLINICAL_DATA = {
         }
     },
     AREA: {
+        # To calculate the area:
+        # cord = list(scan.header.get_zooms())[0:1]
+        # area.append(pixels_by_slice[np.argmax(pixels_by_slice)] * cord[0] * cord[1])
         KEY: "area",
         THRESHOLDS: {
             "area0": [0, 470],

@@ -88,6 +88,7 @@ def process_scan(
     # Central coordinates based on the tumor
     (xm, hm) = get_central_coordinates(ct_slice, crop_dim)
     # Resampling the scan and the mask
+    factor = [1.0, 1.0]
     if resampling:
         original_spacing = list(scan.header.get_zooms())[0:1]
         ct_slice, factor = resample(ct_slice, original_spacing, spacing, mode='nearest')
