@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   hn-cnn:
-    image: pmateus/hn-cnn:1.2.0
+    image: pmateus/hn-cnn:1.3.0
     environment:
       TRAIN_CLINICAL_DATA_PATH: /mnt/data
     volumes:

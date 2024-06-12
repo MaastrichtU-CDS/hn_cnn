@@ -25,7 +25,7 @@ To train/validate/test the model you can use docker (the necessary docker images
 
 Docker images:
 - FSL official image: `vistalab/fsl-v5.0`
-- Custom docker image for pre-processing and training the network: `pmateus/hn-cnn:1.2.0`
+- Custom docker image for pre-processing and training the network: `pmateus/hn-cnn:1.3.0`
 
 It's also possible to configure a local environment without using docker, directly install the necessary dependencies using the `requirements.txt` file.
 
