@@ -114,7 +114,7 @@ def fit(model, data_loaders, parameters={}, store_model={}):
                     best_val_auc = metrics[VALIDATION][ROC][AUC]
                 stop_threshold = store_model.get(STOP_THRESHOLD, DEFAULT_STOP_THRESHOLD)
                 if metrics[TRAIN_METRICS][ROC][AUC] > stop_threshold:
-                    print(f"Early stop: validation AUC above {stop_threshold}")
+                    print(f"Early stop: training AUC above {stop_threshold}")
                     break 
 
     return output

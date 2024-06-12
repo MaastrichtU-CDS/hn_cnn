@@ -10,6 +10,7 @@ Image based prognosis in head and neck cancer using convolutional neural network
     - [Example](#example)
     - [Data split](#data-split)
     - [Training](#training)
+    - [Clinical Data](#clinical-data)
     - [Reproducibility](#reproducibility)
   - [Results](#results)
   - [Citation](#citation)
@@ -82,6 +83,8 @@ In './example' you can find a small subset of images to test the network trainin
 ### Data split
 
 In this work, we followed the same data split as previous studies. In this strategy, two cohorts are used for training, two for validation, and one exclusively for external validation. To train the model following this method, configure the `DATA_SPLIT` parameter with `COHORT_SPLIT`.
+The cohort for training and validation are part of the [Head-Neck-PET-CT dataset](https://doi.org/10.7937/K9/TCIA.2017.8oje5q00).
+The dataset [HEAD-NECK-RADIOMICS-HN1](https://doi.org/10.7937/tcia.2019.8kap372n) from Maastro was used exclusively for external validation.
 
 ![Data split based on the cohorts available](/censored_data.png)
 
@@ -121,6 +124,28 @@ Regarding the data augmentation techniques:
 - `VERTICAL_FLIP`: by default a probability of 0.5
 - `ROTATE_90`: randomly rotate the image 90 degrees 1-3 times, by default a probability of 0.75
 - `ROTATION`: randomly rotate the image a certain number of degrees, by default maximum 10 degrees
+
+To store the model, include the following parameters:
+- `MODEL_ID`: will be used for the file name in combination with the epoch number
+- `MODEL_PATH`: the path for the folder to store the models
+- `THRESHOLD`: (optional) Stores the model if the AUC for the validation set is above this value
+- `MAX_DIFFERENCE`: (optional) Stores the model if the difference between the training and validation AUC is below this value
+
+### Clinical Data
+
+The clinical variables currently considered can be checked in the file `parse_data.py`.
+The dictionary `CLINICAL_DATA` identifies the necessary variables and the values used across the different datasets.
+This information is used to harmonize the datasets before training the network.
+
+The clinical information considered: primary site, T-stage, N-stage, TNM-stage, HPV (human papillomavirus) status, 
+volume, and area of the tumour.
+
+Currently, the clinical variables included in the model (when setting `CLINICAL_VARIABLES` to `True`) are pre-set in the
+file `parse_data.py`:
+```python
+  features = tabular[["n0", "n1", "n2", "t1", "t2", "t3", "t4", "vol0", "vol1", "vol2", "vol3"]]
+``` 
+If you change this set, make sure to also modify the number of neurons in the network accordingly (file `cnn.py`).
 
 ### Reproducibility
 

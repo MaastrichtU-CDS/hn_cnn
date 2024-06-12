@@ -45,6 +45,17 @@ CONFIGURATIONS = {
     # Leave empty to train the network without clinical data
     CLINICAL_VARIABLES: [],
     DATA_AUGMENTATION: {},
+    # Include the following section if you want to store the model
+    # STORE_MODEL: {
+    #     # The filename will consist of model_id + epoch
+    #     MODEL_ID: "model1",
+    #     # Path for the folder to store the models
+    #     MODEL_PATH: '/mnt/models',
+    #     # Minimum AUC for the validation set
+    #     THRESHOLD: 0.8,
+    #     # Maximum difference between training and validation AUC
+    #     MAX_DIFFERENCE: 0.1,
+    # }
 }
 
 # Set the seeds

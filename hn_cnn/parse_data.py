@@ -38,7 +38,8 @@ CLINICAL_DATA = {
         VALUES: {
             "n0": ['N0', '0'],
             "n1": ['N1', '1'],
-            # Only 1 patient with N3 stage
+            # In our analysis, N2 and N3 were groupped due to the low number
+            # of patients with the N3 stage in the training set
             "n2": ['N2', 'N2A', 'N2B', 'N2C', '2', 'N3', 'N3B', '3'],
             "n3": ['N3', 'N3B', '3'],
         }
@@ -140,6 +141,7 @@ def parse_clinical(tabular):
                 tabular[site_key] = int(
                     column_value >= site_values[0] and (site_values[1] < 0 or column_value < site_values[1])
                 )
+    # Features included in the training
     features = tabular[["n0", "n1", "n2", "t1", "t2", "t3", "t4", "vol0", "vol1", "vol2", "vol3"]]
     return torch.FloatTensor(features.tolist())
 
