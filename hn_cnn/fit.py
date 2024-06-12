@@ -96,6 +96,9 @@ def fit(model, data_loaders, parameters={}, store_model={}):
                         print(subset)
                         print(subset_metrics)
                 output.append(metrics)
+                # Store the model if a path is provided, the validation AUC improves and its above
+                # the threshold defined, and the difference between training and validation AUC is 
+                # below a certain threshold.
                 if store_model.get(MODEL_PATH) and metrics[VALIDATION][ROC][AUC] > best_val_auc \
                     and metrics[VALIDATION][ROC][AUC] > store_model.get(THRESHOLD, 0) \
                         and abs(metrics[VALIDATION][ROC][AUC] - metrics[TRAIN_METRICS][ROC][AUC]) < \
@@ -105,7 +108,7 @@ def fit(model, data_loaders, parameters={}, store_model={}):
                         epoch,
                         model,
                         optimizer,
-                        loss,
+                        metrics[TRAIN_METRICS][LOSS],
                         model_id=store_model[MODEL_ID] or str(type(model))
                     )
                     best_val_auc = metrics[VALIDATION][ROC][AUC]

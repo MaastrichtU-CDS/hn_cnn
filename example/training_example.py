@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.model_selection import KFold, StratifiedKFold
 import torch
 from torch.utils.data.dataloader import DataLoader
-# from torchsummary import summary
+from torchsummary import summary
 
 from hn_cnn.cnn import MODELS
 from hn_cnn.constants import *
@@ -32,7 +32,11 @@ DATA = {
 
 # Configure the network parameters
 CONFIGURATIONS = {
-    MODEL: LR,
+    # MODEL:
+    # - LR (logistic regression)
+    # - CNN (Convolutional Neural Network imaging data and (optional) clinical data)
+    # - ANN (Neural Network for clinical data)
+    MODEL: CNN,
     DATA_SPLIT: COHORT_SPLIT,
     FOLDS: 2,
     TIME_TO_EVENT: 2 * 365,
@@ -44,10 +48,19 @@ CONFIGURATIONS = {
         EPOCHS: 5,
     },
     BATCH_SIZE: 64,
-    LOGS_PATH: "/mnt/log.txt",
+    LOGS_PATH: "/mnt/logs/log.txt",
     # Leave empty to train the network without clinical data
     CLINICAL_VARIABLES: [],
     DATA_AUGMENTATION: {},
+    # Folder to store the models
+    STORE_MODEL: {
+        MODEL_ID: "model1",
+        MODEL_PATH: '/mnt/models',
+        # Minimum AUC for the validation set
+        # THRESHOLD: 0.8,
+        # Maximum difference between training and validation AUC
+        # MAX_DIFFERENCE: 0.1,
+    }
 }
 
 
@@ -88,10 +101,13 @@ def run_network(folders, config, ids):
     print(model)
     # Print a summary of the model
     # summary(model, (1, 180, 180))
+    if config[MODEL] in [ANN, CNN]:
+        print(summary(model, (1, 180, 180)))
     history = fit(
         model,
         dataloaders,
         parameters=config[HYPERPARAMETERS],
+        store_model=config[STORE_MODEL],
     )
     return history
 
@@ -119,20 +135,20 @@ if CONFIGURATIONS[DATA_SPLIT] == COHORT_SPLIT:
         timeframe=CONFIGURATIONS[TIME_TO_EVENT],
         event=CONFIGURATIONS[EVENT],
     )
-    # with open(file_path, "w") as o:
-    #     with contextlib.redirect_stdout(o):
-    dataloaders = {}
-    train_ids = [id for id in dataset_train.keys if "HGJ" in id or "CHUS" in id]
-    validation_ids =  [id for id in dataset_train.keys if "HMR" in id or "CHUM" in id]
+    with open(file_path, "w") as o:
+        with contextlib.redirect_stdout(o):
+            dataloaders = {}
+            train_ids = [id for id in dataset_train.keys if "HGJ" in id or "CHUS" in id]
+            validation_ids =  [id for id in dataset_train.keys if "HMR" in id or "CHUM" in id]
 
-    DATA[TRAIN_METRICS] = DATA[TRAIN]
-    dataset_ids = {}
-    for dataset in [TRAIN, TRAIN_METRICS, VALIDATION, TESTING]:
-        is_training = (dataset == TRAIN)
-        dataset_ids[dataset] = []
-        if dataset in [TRAIN, TRAIN_METRICS, VALIDATION]:
-            dataset_ids[dataset] = train_ids if is_training or dataset == TRAIN_METRICS else validation_ids
-    run_network(DATA, CONFIGURATIONS, dataset_ids)
+            DATA[TRAIN_METRICS] = DATA[TRAIN]
+            dataset_ids = {}
+            for dataset in [TRAIN, TRAIN_METRICS, VALIDATION, TESTING]:
+                is_training = (dataset == TRAIN)
+                dataset_ids[dataset] = []
+                if dataset in [TRAIN, TRAIN_METRICS, VALIDATION]:
+                    dataset_ids[dataset] = train_ids if is_training or dataset == TRAIN_METRICS else validation_ids
+            run_network(DATA, CONFIGURATIONS, dataset_ids)
 
 elif CONFIGURATIONS[DATA_SPLIT] == CROSS_VALIDATION:
     kfold = StratifiedKFold(n_splits=CONFIGURATIONS[FOLDS], shuffle=True, random_state=random_seed_split)
@@ -147,14 +163,14 @@ elif CONFIGURATIONS[DATA_SPLIT] == CROSS_VALIDATION:
         print(f"Fold: {fold}")
         # Store the model training logs in a file
         file_path = CONFIGURATIONS[LOGS_PATH]
-        #with open(file_path, "w") as o:
-        #    with contextlib.redirect_stdout(o):
-        DATA[TRAIN_METRICS] = DATA[TRAIN]
-        dataset_ids = {}
-        for dataset in [TRAIN, TRAIN_METRICS, VALIDATION, TESTING]:                
-            is_training = (dataset == TRAIN)
-            dataset_ids[dataset] = []
-            if dataset in [TRAIN, TRAIN_METRICS, VALIDATION]:
-                dataset_ids[dataset] = [dataset_train.keys[i] for i in train_ids] if \
-                    is_training or dataset == TRAIN_METRICS else [dataset_train.keys[i] for i in validation_ids]
-        run_network(DATA, CONFIGURATIONS, dataset_ids)
+        with open(file_path, "w") as o:
+            with contextlib.redirect_stdout(o):
+                DATA[TRAIN_METRICS] = DATA[TRAIN]
+                dataset_ids = {}
+                for dataset in [TRAIN, TRAIN_METRICS, VALIDATION, TESTING]:                
+                    is_training = (dataset == TRAIN)
+                    dataset_ids[dataset] = []
+                    if dataset in [TRAIN, TRAIN_METRICS, VALIDATION]:
+                        dataset_ids[dataset] = [dataset_train.keys[i] for i in train_ids] if \
+                            is_training or dataset == TRAIN_METRICS else [dataset_train.keys[i] for i in validation_ids]
+                run_network(DATA, CONFIGURATIONS, dataset_ids)
