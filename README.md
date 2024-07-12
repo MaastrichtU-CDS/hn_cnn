@@ -88,7 +88,7 @@ The dataset [HEAD-NECK-RADIOMICS-HN1](https://doi.org/10.7937/tcia.2019.8kap372n
 
 ![Data split based on the cohorts available](/censored_data.png)
 
-Addittionally, we evaluated the uncertainity of the model with a 5-fold cross validation strategy. To train the model following this method, configure the `DATA_SPLIT` parameter with `CROSS_VALIDATION`.
+Additionally, we evaluated the uncertainity of the model with a 5-fold cross validation strategy. To train the model following this method, configure the `DATA_SPLIT` parameter with `CROSS_VALIDATION`.
 
 ### Training
 

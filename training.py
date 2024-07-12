@@ -14,6 +14,7 @@ from hn_cnn.data_augmentation import get_training_augmentation, TRANSFORM_TO_TEN
 from hn_cnn.fit import fit
 from hn_cnn.parse_data import ImageDataset
 
+# Specify the path to the training, validation, and testing dataset file and imaging folder.
 DATA = {
     TRAIN: {
         CLINICAL_DATA_PATH: "",
@@ -30,10 +31,15 @@ DATA = {
 }
 
 CONFIGURATIONS = {
+    # The Model can be: CNN, ANN, LR
     MODEL: CNN,
+    # How to split the data (COHORT_SPLIT or CROSS_VALIDATION)
     DATA_SPLIT: COHORT_SPLIT,
+    # The number of folds in case of using CROSS_VALIDATION
     FOLDS: 5,
+    # The period considered for the event to occur in days
     TIME_TO_EVENT: 2 * 365,
+    # The Event can be: DM, LRF, OS
     EVENT: DM,
     HYPERPARAMETERS: {
         # Include any hypeparameters that you want to change

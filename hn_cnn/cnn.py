@@ -26,7 +26,7 @@ class ImageClassificationBase(nn.Module):
         return loss
 
 
-    def validation_step(self, batch, class_weights):
+    def validation_step(self, batch, class_weights, predict=False):
         """ Perform a validation step
         """
         # Generate predictions
@@ -73,6 +73,8 @@ class ImageClassificationBase(nn.Module):
             }
 
         }
+        if predict:
+            performance[PREDICTIONS] = predictions.numpy()
         return performance
 
 class HNCNN(ImageClassificationBase):

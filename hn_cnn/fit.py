@@ -1,6 +1,6 @@
 import torch
 
-from hn_cnn.cnn import HNLR
+from hn_cnn.cnn import HNANN, HNCNN, HNLR
 from hn_cnn.constants import *
 from hn_cnn.utils import update_parameters, save_model
 
@@ -18,11 +18,11 @@ DEFAULT_HYPERPARAMETERS = {
 DEFAULT_STOP_THRESHOLD = 0.95
 
 @torch.no_grad()
-def evaluate(model, val_loader, weights):
+def evaluate(model, val_loader, weights, predict=False):
     model.eval()
     metrics = {}
     for batch in val_loader:
-        metrics = model.validation_step(batch, weights)
+        metrics = model.validation_step(batch, weights, predict)
     return metrics
 
 def fit(model, data_loaders, parameters={}, store_model={}):
@@ -118,3 +118,27 @@ def fit(model, data_loaders, parameters={}, store_model={}):
                     break 
 
     return output
+
+def predict(model, data_loaders, parameters={}, threshold=None):
+    """ Predictions.
+    """
+    metrics = {}
+    hyperparameters = update_parameters(parameters, DEFAULT_HYPERPARAMETERS)
+    if isinstance(model, HNANN) or isinstance(model, HNCNN):
+        # Train the neural networks
+        optimizer = hyperparameters[OPTIMIZER](
+            model.parameters(),
+            lr=hyperparameters[LEARNING_RATE],
+            momentum=hyperparameters[MOMENTUM],
+            dampening=hyperparameters[DAMPENING],
+            weight_decay=hyperparameters[WEIGHTS_DECAY],
+        )
+        model.eval()
+        with torch.no_grad():
+            for subset, data_loader in data_loaders.items():
+                if subset != TRAIN:
+                    subset_metrics = evaluate(model, data_loader, hyperparameters[CLASS_WEIGHTS], predict=True)
+                    metrics[subset] = subset_metrics
+                    print(subset)
+                    print(subset_metrics)
+    return metrics
