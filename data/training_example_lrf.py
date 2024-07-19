@@ -16,15 +16,15 @@ from hn_cnn.parse_data import ImageDataset
 
 DATA = {
     TRAIN: {
-        CLINICAL_DATA_PATH: "./canada.csv",
+        CLINICAL_DATA_PATH: "./pre-processed/canada.csv",
         SCANS_PATH: "./pre-processed/canada_c",
     },
     VALIDATION: {
-        CLINICAL_DATA_PATH: "./canada.csv",
+        CLINICAL_DATA_PATH: "./pre-processed/canada.csv",
         SCANS_PATH: "./pre-processed/canada_c",
     },
     TESTING: {
-        CLINICAL_DATA_PATH: "./maastro.csv",
+        CLINICAL_DATA_PATH: "./pre-processed/maastro.csv",
         SCANS_PATH: "./pre-processed/maastro_c",
     }
 }

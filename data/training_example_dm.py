@@ -16,15 +16,15 @@ from hn_cnn.parse_data import ImageDataset
 
 DATA = {
     TRAIN: {
-        CLINICAL_DATA_PATH: "./canada.csv",
+        CLINICAL_DATA_PATH: "./pre-processed/canada.csv",
         SCANS_PATH: "./pre-processed/canada_c",
     },
     VALIDATION: {
-        CLINICAL_DATA_PATH: "./canada.csv",
+        CLINICAL_DATA_PATH: "./pre-processed/canada.csv",
         SCANS_PATH: "./pre-processed/canada_c",
     },
     TESTING: {
-        CLINICAL_DATA_PATH: "./maastro.csv",
+        CLINICAL_DATA_PATH: "./pre-processed/maastro.csv",
         SCANS_PATH: "./pre-processed/maastro_c",
     }
 }
@@ -64,6 +64,12 @@ random.seed(7651962)
 random_seed_split = random.randint(0, 9174937)
 # 3) Random seed torch
 torch.manual_seed(775135)
+
+# Not necessary (doesn't make a difference when
+# reproducing the results)
+#device = torch.device("cpu")
+#torch.backends.cudnn.deterministic = True
+#torch.set_num_threads(1)
 
 if CONFIGURATIONS[DATA_SPLIT] == COHORT_SPLIT:
     # Store the model training logs in a file

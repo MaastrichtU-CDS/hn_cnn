@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  hn-cnn:
+    image: pmateus/hn-cnn:1.4.0
+    # Image from DSRI
+    # image: ghcr.io/maastrichtu-ids/code-server@sha256:56a27bb3171050a490a01e56b735c05fbfd96c3b6d0194e3837e0a3f99e99534
+    environment:
+      TRAIN_CLINICAL_DATA_PATH: /mnt/data/canada.csv
+      TRAIN_SCANS_PATH: /mnt/data/canada_c
+      VALIDATION_CLINICAL_DATA_PATH: /mnt/data/canada.csv
+      VALIDATION_SCANS_PATH: /mnt/data/canada_c
+      TESTING_CLINICAL_DATA_PATH: /mnt/data/maastro.csv
+      TESTING_SCANS_PATH: /mnt/data/maastro_c
+    volumes:
+      - ./pre-processed:/mnt/pre-processed
+      - ./training_example_dm.py:/mnt/training.py
+      - ./logs_test:/mnt/logs
+      - ./models_test:/mnt/models
+      - ./script_test.py:/mnt/script.py
+    entrypoint: /bin/bash

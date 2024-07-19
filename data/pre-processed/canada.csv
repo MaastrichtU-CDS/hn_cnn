@@ -1,0 +1,299 @@
+name;sex;age;site;tstage;nstage;mstage;groupstage;overall_hpv_status;time1;time2;time3;time4;time5;therapy;surgery;d_days;lr;dm;d;pixel;vol;area;t_lr;t_dm;t_d
+HN-CHUM-001;M;82;Oropharynx;T2;N2;M0;Stage IV;N/A;0;9;TBD;53;102;chemo radiation;N/A;1806;0;0;0;9424;29719
+HN-CHUM-002;M;73;Oropharynx;T3;N2;M0;Stage IV;N/A;0;53;TBD;94;132;chemo radiation;N/A;805;1;0;0;10892;34348
+HN-CHUM-003;M;56;unknown;Tx;N2;M0;N/A;N/A;0;46;TBD;88;136;chemo radiation;N/A;1841;0;0;0;10864;33879
+HN-CHUM-004;M;62;unknown;Tx;N2;M0;N/A;N/A;0;40;TBD;74;122;chemo radiation;N/A;1776;0;0;0;3477;10843
+HN-CHUM-005;F;67;unknown;Tx;N2;M0;Stage IV;-;0;80;TBD;104;150;chemo radiation;N/A;1725;0;0;0;1904;5937
+HN-CHUM-006;M;65;Oropharynx;T2;N2;M0;Stage IV;N/A;0;41;TBD;53;101;chemo radiation;N/A;1287;0;0;0;18509;38127
+HN-CHUM-007;F;70;Oropharynx;T2;N2;M0;Stage IV;N/A;0;43;TBD;55;104;radiation;N/A;1806;0;0;0;16659;23830
+HN-CHUM-008;F;67;Oropharynx;T2;N2;M0;Stage IV;N/A;0;43;TBD;54;104;chemo radiation;N/A;1603;0;0;0;33427;47817
+HN-CHUM-009;M;64;unknown;Tx;N2;M0;Stage IV;N/A;0;38;TBD;57;105;chemo radiation;N/A;1499;0;0;0;12248;17520
+HN-CHUM-010;M;57;Oropharynx;T1;N2;M0;Stage IV;N/A;0;83;TBD;95;139;chemo radiation;N/A;1741;0;0;0;22636;32381
+HN-CHUM-011;M;61;Oropharynx;T3;N2;M0;Stage IV;N/A;0;50;TBD;62;110;chemo radiation;N/A;1603;0;0;0;48057;68746
+HN-CHUM-012;M;61;Oropharynx;T2;N1;M0;Stage III;+;0;42;TBD;54;99;chemo radiation;N/A;1617;0;0;0;19478;27863
+HN-CHUM-013;F;67;Oropharynx;T1;N2;M0;Stage IV;N/A;0;26;TBD;78;123;chemo radiation;N/A;1338;0;0;0;1801;5616
+HN-CHUM-014;M;59;Oropharynx;T2;N1;M0;Stage IV;+;0;63;TBD;75;123;chemo radiation;N/A;1636;0;0;0;19993;28600
+HN-CHUM-015;M;59;Oropharynx;T1;N1;M0;Stage III;N/A;0;42;TBD;54;99;chemo radiation;N/A;1470;0;0;0;11638;16648
+HN-CHUM-016;M;58;Oropharynx;T2;N2;M0;Stage IV;+;0;44;TBD;56;101;chemo radiation;N/A;1511;0;0;0;6939;9926
+HN-CHUM-017;M;77;Oropharynx;T3;N2;M0;Stage IV;N/A;0;39;TBD;91;136;chemo radiation;N/A;1233;0;1;0;15906;49603
+HN-CHUM-018;F;57;Oropharynx;T2;N0;M0;StageII;N/A;0;39;TBD;104;152;radiation;N/A;1449;0;0;0;8797;27433
+HN-CHUM-019;M;62;Oropharynx;T2;N2;M0;Stage IV;N/A;0;42;TBD;53;98;chemo radiation;N/A;1272;0;0;0;21605;30906
+HN-CHUM-020;M;67;Nasopharynx;T3;N3;M0;Stage IV;N/A;0;108;TBD;119;164;chemo radiation;N/A;350;1;0;1;52048;162312
+HN-CHUM-021;M;63;Oropharynx;T4;N2;M0;Stage IV;+;0;24;TBD;55;100;chemo radiation;N/A;1343;0;0;0;10868;33891
+HN-CHUM-022;M;56;Oropharynx;T2;N2;M0;Stage IV;+;0;37;TBD;55;101;chemo radiation;N/A;1357;0;0;0;10945;15656
+HN-CHUM-023;F;65;Oropharynx;T2;N2;M0;Stage IV;N/A;0;27;TBD;39;84;chemo radiation;N/A;1412;0;0;0;6598;9438
+HN-CHUM-024;M;59;Oropharynx;T3;N2;M0;Stage IV;N/A;0;51;TBD;63;108;chemo radiation;N/A;1147;0;0;0;24771;35435
+HN-CHUM-025;F;57;unknown;Tx;N2;M0;Stage IV;N/A;0;-6;TBD;46;90;chemo radiation;N/A;1268;0;0;0;10018;31241
+HN-CHUM-026;F;67;Oropharynx;T2;N3;M0;Stage IV;+;0;-3;TBD;45;90;chemo radiation;N/A;1308;0;0;0;17449;54414
+HN-CHUM-027;F;69;Oropharynx;T3;N2;M0;Stage IV;N/A;0;-191;TBD;-179;-131;chemo radiation;N/A;1014;0;0;0;22253;31833
+HN-CHUM-028;M;73;Hypopharynx;T3;N2;M0;Stage IV;-;0;43;TBD;55;104;chemo radiation;N/A;627;1;0;1;18774;26856
+HN-CHUM-029;M;50;Oropharynx;T2;N3;M0;Stage IV;+;0;13;TBD;25;74;chemo radiation;N/A;1328;0;0;0;28549;40839
+HN-CHUM-030;M;68;Oropharynx;T3;N2;M0;Stage IV;N/A;0;42;TBD;53;97;chemo radiation;N/A;1000;0;0;0;45509;65101
+HN-CHUM-031;M;65;Oropharynx;T2;N2;M0;Stage IV;N/A;0;36;TBD;54;99;chemo radiation;N/A;1188;0;0;0;4009;12502
+HN-CHUM-032;M;52;Oropharynx;T3;N2;M0;Stage IV;N/A;0;21;TBD;56;104;chemo radiation;N/A;1190;0;0;0;12497;38972
+HN-CHUM-033;M;68;Oropharynx;T3;N2;M0;Stage IV;+;0;29;TBD;63;108;chemo radiation;N/A;1261;0;0;0;12925;40306
+HN-CHUM-034;M;49;Oropharynx;T3;N2;M0;Stage IV;N/A;0;20;TBD;31;76;chemo radiation;N/A;1183;0;0;0;36135;51691
+HN-CHUM-035;M;63;Oropharynx;T3;N3;M0;Stage IV;N/A;0;-19;TBD;21;66;chemo radiation;N/A;1153;0;0;0;18203;56766
+HN-CHUM-036;M;51;Oropharynx;T1;N2;M0;Stage IV;+;0;49;TBD;60;104;chemo radiation;N/A;1237;0;0;0;14838;21225
+HN-CHUM-037;F;70;Oropharynx;T2;N2;M0;Stage IV;+;0;24;TBD;35;79;chemo radiation;N/A;1207;0;0;0;15627;22354
+HN-CHUM-038;M;44;Oropharynx;T1;N2;M0;Stage IV;N/A;0;51;TBD;62;107;chemo radiation;N/A;891;0;0;0;25585;36599
+HN-CHUM-039;M;61;Oropharynx;T2;N2;M0;Stage IV;+;0;24;TBD;35;82;chemo radiation;N/A;1076;0;1;1;18630;26650
+HN-CHUM-040;M;71;Oropharynx;T1;N2;M0;Stage IV;+;0;-13;TBD;53;99;chemo radiation;N/A;1106;0;0;0;3036;9467
+HN-CHUM-041;M;64;Oropharynx;T2;N1;M0;Stage III;+;0;-10;TBD;1;46;chemo radiation;N/A;1132;0;0;0;24081;34448
+HN-CHUM-042;M;60;Oropharynx;T2;N2;M0;Stage IV;N/A;0;30;TBD;41;86;chemo radiation;N/A;1120;0;0;0;24831;35521
+HN-CHUM-043;M;58;Oropharynx;T4;N2;M0;Stage IV;+;0;90;TBD;111;158;chemo radiation;N/A;1222;0;0;0;15086;21580
+HN-CHUM-044;F;44;Oropharynx;T2;N2;M0;Stage IV;+;0;34;TBD;45;91;chemo radiation;N/A;966;0;0;0;13831;19785
+HN-CHUM-045;M;50;Oropharynx;T1;N2;M0;Stage IV;+;0;41;TBD;54;98;chemo radiation;N/A;891;0;0;0;5436;7776
+HN-CHUM-046;F;64;Oropharynx;T1;N1;M0;Stage III;+;0;28;TBD;35;83;radiation;N/A;753;0;0;0;6282;8986
+HN-CHUM-047;F;51;Oropharynx;T2;N2;M0;Stage IV;N/A;0;91;TBD;103;148;chemo radiation;N/A;862;0;0;0;11937;17076
+HN-CHUM-048;M;90;Oropharynx;T2;N0;M0;StageII;N/A;0;43;TBD;54;103;radiation;N/A;980;0;0;0;13984;20004
+HN-CHUM-049;M;69;Oropharynx;T4;N0;M0;Stage IV;N/A;0;63;TBD;75;120;chemo radiation;N/A;1310;0;0;0;19786;28304
+HN-CHUM-050;M;71;Oropharynx;T3;N2;M0;Stage IV;N/A;0;35;TBD;46;91;chemo radiation;N/A;1427;0;0;0;22506;32195
+HN-CHUM-051;M;71;Oropharynx;T2;N2;M0;Stage IV;+;0;34;TBD;58;105;chemo radiation;N/A;1465;1;0;0;10591;33028
+HN-CHUM-052;M;47;Nasopharynx;T2;N2;M0;Stage III;N/A;0;81;TBD;102;147;chemo radiation;N/A;787;0;0;0;15765;49163
+HN-CHUM-053;F;62;Oropharynx;T3;N2;M0;Stage IV;-;0;42;TBD;53;102;chemo radiation;N/A;766;1;0;1;20247;28963
+HN-CHUM-054;M;70;Oropharynx;T2;N1;M0;Stage III;N/A;0;48;TBD;59;104;chemo radiation;N/A;818;0;0;0;3710;5307
+HN-CHUM-055;F;65;Oropharynx;T4;N1;M0;Stage IV;+;0;58;TBD;70;115;chemo radiation;N/A;1238;0;0;0;63721;91153
+HN-CHUM-056;M;57;Oropharynx;T3;N3;M0;Stage IV;N/A;0;28;TBD;39;85;chemo radiation;N/A;943;0;0;0;21667;30994
+HN-CHUM-057;M;71;Oropharynx;T2;N2;M0;Stage IV;N/A;0;44;TBD;57;101;chemo radiation;N/A;1043;0;0;0;14621;20915
+HN-CHUM-058;F;60;Oropharynx;T2;N3;M0;Stage IV;+;0;57;TBD;68;114;chemo radiation;N/A;974;0;0;0;3176;4543
+HN-CHUM-059;M;66;Oropharynx;T2;N2;M0;Stage IV;N/A;0;15;TBD;26;71;chemo radiation;N/A;796;0;0;0;14284;20433
+HN-CHUM-060;M;48;Oropharynx;T4;N3;M0;Stage IV;+;0;69;TBD;75;120;chemo radiation;N/A;881;0;0;0;32732;46823
+HN-CHUM-061;M;72;Oropharynx;T2;N2;M0;Stage IV;N/A;0;20;TBD;54;103;chemo radiation;N/A;464;1;0;1;8586;26775
+HN-CHUM-062;M;72;Oropharynx;T3;N1;M0;Stage III;N/A;0;69;TBD;81;130;chemo radiation;N/A;1379;0;0;0;26376;37731
+HN-CHUM-063;M;77;Oropharynx;T3;N2;M0;Stage IV;N/A;0;4;TBD;30;84;chemo radiation;N/A;2012;1;1;0;14270;44501
+HN-CHUM-064;M;73;Oropharynx;T3;N3;M0;Stage IV;N/A;0;44;TBD;56;100;chemo radiation;N/A;870;0;0;0;64741;92612
+HN-CHUM-065;M;81;Oropharynx;T3;N0;M0;Stage IV;N/A;0;14;TBD;73;118;chemo radiation;N/A;788;0;0;0;8660;52932
+HN-HGJ-001;M;79;Larynx;T3;N0;M0;stage III;-;0;71;64;97;140;chemo radiation;0;2123;1;0;0;2630;8201
+HN-HGJ-002;M;41;Nasopharynx;T1;N1;M0;stage IIB;-;0;37;35;63;108;chemo radiation;0;2114;1;0;0;17404;54274
+HN-HGJ-003;M;75;Larynx;T3;N2b;M0;stage IVA;N/A;0;49;51;65;113;chemo radiation;0;1098;1;1;1;15817;49325
+HN-HGJ-004;M;53;Nasopharynx;T3;N1;M0;stage III;N/A;0;20;16;40;85;radiation;0;2974;0;0;0;19945;62198
+HN-HGJ-005;M;74;Nasopharynx;T1;N1;M0;stage IIB;-;0;41;43;71;120;chemo radiation;0;2509;0;0;1;15963;49780
+HN-HGJ-006;F;53;Nasopharynx;T1;N2b;M0;stage III;N/A;0;35;29;42;81;chemo radiation;0;3345;0;0;0;13516;42149
+HN-HGJ-007;M;62;Oropharynx;T4;N2b;M0;stage IVA;+;0;22;36;48;87;chemo radiation;0;361;0;1;1;24963;77847
+HN-HGJ-008;M;61;Oropharynx;T2;N2b;M0;stage IVA;N/A;0;35;38;57;100;chemo radiation;0;2072;0;0;0;22170;69137
+HN-HGJ-009;M;59;Larynx;T3;N0;M0;stage III;-;0;27;25;41;85;chemo radiation;0;1936;0;0;0;13855;43206
+HN-HGJ-010;F;79;Oropharynx;T2;N2b;M0;stage IVA;-;0;21;20;40;83;chemo radiation;0;1938;0;0;0;1869;5828
+HN-HGJ-011;M;56;Larynx;T3;N2b;M0;stage IVA;N/A;0;17;14;38;80;chemo radiation;0;1887;0;0;0;12732;39704
+HN-HGJ-012;M;53;unknown;Tx;N2b;M0;stage IV;+;0;36;35;49;98;chemo radiation;0;2002;0;0;0;1758;5482
+HN-HGJ-013;F;62;Oropharynx;T3;N2b;M0;stage IVA;+;0;37;30;50;94;chemo radiation;0;1414;0;0;0;2529;7536
+HN-HGJ-014;M;60;Larynx;T1;N2b;Mx;stage IVA;N/A;0;3;-1;13;63;chemo radiation;0;479;0;1;1;14443;45040
+HN-HGJ-015;F;56;Oropharynx;T2;N2b;M0;stage IVA;N/A;0;61;56;89;133;chemo radiation;1;1133;0;0;0;1380;4303
+HN-HGJ-016;F;51;Oropharynx;T3;N0;M0;stage III;N/A;0;25;24;45;87;chemo radiation;0;2498;0;0;0;14904;46478
+HN-HGJ-017;M;69;Oropharynx;T4;N1;M0;stage IVA;N/A;0;33;26;46;92;chemo radiation;0;859;1;0;1;19197;59866
+HN-HGJ-018;F;56;Oropharynx;T4;N2c;M0;stage IVA;+;0;30;25;37;86;chemo radiation;0;1451;1;0;0;13652;42573
+HN-HGJ-019;M;61;Hypopharynx;T1;N2b;M0;stage IVA;+;0;22;17;41;87;chemo radiation;0;1598;0;1;1;3932;12261
+HN-HGJ-020;M;62;Larynx;T3;N0;M0;stage III;-;0;76;69;89;134;chemo radiation;0;2119;0;0;0;1188;3704
+HN-HGJ-021;M;60;Larynx;T3;N2c;M0;stage IVA;N/A;0;48;69;69;112;chemo radiation;0;376;0;1;1;82973;258752
+HN-HGJ-022;M;52;Larynx;T3;N1;M0;stage III;-;0;27;25;39;81;chemo radiation;0;1663;0;0;0;6288;18140
+HN-HGJ-023;M;53;Nasopharynx;T1;N3;M0;stage IVB;N/A;0;26;20;33;82;chemo radiation;0;3261;0;0;0;28373;88481
+HN-HGJ-024;M;47;Larynx;T4;N2c;Mx;stage IVA;N/A;0;45;43;55;93;chemo radiation;0;911;0;1;1;39144;122071
+HN-HGJ-025;M;65;Oropharynx;T4;N2c;M0;stage IVA;-;0;33;24;46;90;chemo radiation;0;2596;0;0;0;18174;56675
+HN-HGJ-026;M;79;Oropharynx;T3;N1;M0;stage III;N/A;0;35;28;42;90;chemo radiation;0;2628;0;0;0;11928;37197
+HN-HGJ-027;M;64;unknown;Tx;N2a;M0;stage IV;N/A;0;32;29;57;104;chemo radiation;0;2051;0;0;0;6476;20195
+HN-HGJ-028;M;72;Oropharynx;T2;N1;M0;stage III;+;0;72;65;84;128;chemo radiation;1;1634;1;1;1;8733;27233
+HN-HGJ-029;F;59;Oropharynx;T1;N2b;M0;stage IVA;+;0;69;64;90;131;chemo radiation;1;1846;0;0;0;9308;18783
+HN-HGJ-030;F;45;Oropharynx;T1;N2b;M0;stage IVA;N/A;0;34;30;47;93;chemo radiation;1;2133;0;0;0;9158;28559
+HN-HGJ-031;M;52;Oropharynx;T4;N2c;M0;stage IVA;N/A;0;33;33;47;87;chemo radiation;0;884;1;0;0;22549;70319
+HN-HGJ-032;F;49;Oropharynx;T2;N2b;M0;stage IVA;N/A;0;45;40;55;103;chemo radiation;0;2972;0;0;0;8569;26722
+HN-HGJ-033;M;18;Nasopharynx;T3;N2a;M0;stage III;N/A;0;12;15;33;83;chemo radiation;0;2940;0;1;0;12166;37939
+HN-HGJ-034;M;73;Oropharynx;T3;N2b;M0;stage IVA;N/A;0;73;68;88;131;chemo radiation;1;2684;0;0;0;3571;11136
+HN-HGJ-035;M;64;Oropharynx;T2;N2b;M0;stage IVA;+;0;72;71;84;128;chemo radiation;1;1962;0;0;0;8257;25749
+HN-HGJ-036;M;62;Oropharynx;T3;N2b;M0;stage IVA;+;0;30;25;44;85;chemo radiation;0;1495;0;0;0;22422;69923
+HN-HGJ-037;M;56;Oropharynx;T2;N2b;M0;stage IVA;N/A;0;34;29;55;93;chemo radiation;1;1091;0;0;0;27992;87293
+HN-HGJ-038;M;64;Oropharynx;T4;N2c;M0;stage IVA;N/A;0;63;66;77;122;chemo radiation;0;847;0;0;0;5855;18258
+HN-HGJ-039;M;48;Oropharynx;T1;N2a;M0;stage IVA;N/A;0;22;21;39;81;radiation;0;2188;0;0;0;3226;10060
+HN-HGJ-040;M;74;Hypopharynx;T4;N2c;M0;stage IVA;-;0;37;31;50;92;chemo radiation;0;603;0;1;1;26320;62751
+HN-HGJ-041;F;59;unknown;Tx;N2c;M0;stage IVA;N/A;0;-5;-7;29;70;chemo radiation;0;2472;0;0;0;16766;52284
+HN-HGJ-042;M;75;Larynx;T3;N0;M0;stage III;-;0;44;37;56;102;chemo radiation;0;2005;0;0;0;5913;18439
+HN-HGJ-043;M;48;Oropharynx;T2;N2c;M0;stage IVA;N/A;0;47;34;53;92;chemo radiation;0;3114;0;0;0;12581;39234;1742
+HN-HGJ-044;M;76;Hypopharynx;T3;N1;M0;stage III;-;0;42;41;57;103;chemo radiation;0;1843;0;0;1;3941;12290
+HN-HGJ-045;M;47;Nasopharynx;T3;N1;M0;stage III;-;0;42;41;58;105;chemo radiation;0;1939;1;0;0;5958;18580
+HN-HGJ-046;M;69;Oropharynx;T4;N2c;M0;stage IVA;N/A;0;36;29;49;97;chemo radiation;0;2010;0;0;0;33592;104757
+HN-HGJ-047;M;50;Nasopharynx;T3;N1;M0;stage III;-;0;40;32;54;99;chemo radiation;0;2449;1;0;0;6303;19655
+HN-HGJ-048;M;53;Oropharynx;T4;N2c;M0;stage IVA;N/A;0;32;27;54;96;chemo radiation;0;2751;0;0;0;18902;58946
+HN-HGJ-049;M;54;Nasopharynx;T1;N1;M0;stage II;N/A;0;36;23;42;88;chemo radiation;0;3402;0;0;0;10384;32382
+HN-HGJ-050;M;57;Oropharynx;T3;N2b;M0;stage IVA;+;0;40;39;59;98;chemo radiation;0;1697;0;0;0;19592;61097
+HN-HGJ-051;M;65;Nasopharynx;T2;N2b;M0;stage III;-;0;50;44;63;107;chemo radiation;0;887;0;1;1;24467;76300
+HN-HGJ-052;F;77;Oropharynx;T2;N2a;M0;stage IVA;+;0;35;29;47;91;chemo radiation;0;1923;0;0;0;8702;27137
+HN-HGJ-053;M;81;Oropharynx;T3;N0;M0;stage III;-;0;26;32;45;90;radiation;0;1966;0;0;0;9194;28671
+HN-HGJ-054;M;76;Larynx;T3;N2b;M0;stage IVA;N/A;0;40;35;77;119;chemo radiation;0;1374;0;0;0;13476;42025
+HN-HGJ-055;M;64;Oropharynx;T3;N3;M0;stage IVB;-;0;29;30;56;98;chemo radiation;0;2744;0;0;0;29698;92613
+HN-HGJ-056;M;84;Nasopharynx;T3;N2b;M0;stage III;N/A;0;100;99;128;178;chemo radiation;0;974;0;0;1;37111;115731
+HN-HGJ-057;F;60;Oropharynx;T1;N2a;M0;stage IVA;N/A;0;7;9;24;67;chemo radiation;0;2268;0;0;0;8486;26463
+HN-HGJ-058;M;62;Oropharynx;T2;N2b;M0;stage IVA;N/A;0;35;37;59;101;chemo radiation;0;2688;0;0;0;3120;9729
+HN-HGJ-059;F;80;unknown;Tx;N2c;M0;stage IV;-;0;-203;-210;-195;-149;chemo radiation;0;1353;1;0;0;6881;21458
+HN-HGJ-060;M;53;Nasopharynx;T4;N1;M0;stage IVA;-;0;28;21;40;89;chemo radiation;0;1608;0;0;0;23403;72982
+HN-HGJ-061;M;58;Larynx;T3;N1;M0;stage III;-;0;55;50;69;116;chemo radiation;0;686;0;1;1;2707;9543
+HN-HGJ-062;M;50;Oropharynx;T3;N0;M0;stage III;+;0;62;57;76;117;chemo radiation;0;1392;0;0;0;13708;42748
+HN-HGJ-063;M;51;Larynx;T3;N0;M0;stage III;-;0;22;16;36;77;chemo radiation;0;1318;0;0;0;402;1253
+HN-HGJ-064;M;75;Larynx;T3;N2b;M0;stage IVA;-;0;76;70;88;133;chemo radiation;0;1376;0;0;0;7140;22266
+HN-HGJ-065;M;61;Oropharynx;T3;N2c;M0;stage IVA;+;0;64;59;85;126;chemo radiation;0;1280;0;0;0;15934;49690
+HN-HGJ-066;M;56;Oropharynx;T1;N2c;M0;stage IVA;+;0;23;24;42;86;chemo radiation;0;1262;0;0;0;9744;30386
+HN-HGJ-067;M;64;Oropharynx;T1;N0;M0;stage I;+;0;48;50;61;119;radiation;0;1384;0;0;0;3543;11048
+HN-HGJ-069;M;58;Oropharynx;T3;N2a;M0;stage IVA;+;0;44;38;56;98;chemo radiation;0;1311;0;0;0;13772;42948
+HN-HGJ-070;M;47;Oropharynx;T1;N2a;M0;stage IVA;-;0;-10;-17;3;53;chemo radiation;0;1003;0;0;0;6714;20937
+HN-HGJ-071;M;69;Oropharynx;T3;N2b;M0;stage IVA;+;0;29;28;42;85;chemo radiation;0;1014;0;0;0;14909;46493
+HN-HGJ-072;M;62;Oropharynx;T1;N1;M0;stage III;+;0;94;93;114;158;chemo radiation;0;1030;0;0;0;18746;58459
+HN-HGJ-073;M;57;Oropharynx;T2;N2b;M0;stage IVA;+;0;33;39;52;97;chemo radiation;1;1298;0;0;0;18006;56151
+HN-HGJ-074;M;62;Oropharynx;T3;N2b;M0;stage IVA;+;0;50;51;65;107;chemo radiation;0;1294;0;0;0;14603;58839
+HN-HGJ-075;F;37;Nasopharynx;T1;N2a;M0;stage III;-;0;43;36;56;101;chemo radiation;0;1238;0;0;0;11577;36103
+HN-HGJ-076;M;73;Oropharynx;T4;N2c;M0;stage IVA;+;0;48;47;62;104;chemo radiation;0;1272;0;0;0;7943;24770
+HN-HGJ-077;M;64;Oropharynx;T2;N1;M0;stage III;+;0;57;56;71;115;chemo radiation;0;1196;0;0;0;12000;37422
+HN-HGJ-078;M;69;Oropharynx;T2;N1;M0;stage III;-;0;21;39;53;95;chemo radiation;0;1158;1;0;0;4221;13163
+HN-HGJ-079;M;66;Nasopharynx;T2;N2b;M0;stage III;-;0;14;13;34;82;chemo radiation;0;1140;0;1;0;13987;43618
+HN-HGJ-080;F;56;Oropharynx;T1;N2a;M0;stage IVA;+;0;55;53;68;112;chemo radiation;0;1112;0;0;0;15498;48330
+HN-HGJ-081;M;74;Oropharynx;T2;N2b;M0;stage IVA;-;0;57;56;78;119;chemo radiation;0;938;1;0;0;6011;18745
+HN-HGJ-082;M;51;Oropharynx;T1;N3;Mx;stage IVB;-;0;65;63;72;123;chemo radiation;0;1059;0;1;0;26122;81461
+HN-HGJ-083;M;70;Oropharynx;T3;N2c;M0;stage IVA;-;0;36;34;51;94;chemo radiation;0;869;0;0;0;11198;34921
+HN-HGJ-084;F;73;Hypopharynx;T3;N1;Mx;stage III;-;0;40;38;59;116;chemo radiation;0;794;0;0;0;3922;12230
+HN-HGJ-085;M;67;Oropharynx;T3;N2b;M0;stage IVA;-;0;30;29;44;88;chemo radiation;0;953;0;1;0;16606;51786
+HN-HGJ-086;F;62;Oropharynx;T1;N2b;M0;stage IVA;+;0;47;45;61;104;chemo radiation;1;815;0;1;0;1870;5831
+HN-HGJ-087;M;64;Oropharynx;T2;N0;M0;stage II;+;0;29;28;50;92;radiation;0;727;0;0;0;2601;8111
+HN-HGJ-088;M;59;Oropharynx;T2;N0;M0;stage II;+;0;48;40;55;96;chemo radiation;0;858;0;0;0;6222;19403
+HN-HGJ-089;M;66;Oropharynx;T1;N2c;M0;stage IVA;+;0;39;43;63;106;chemo radiation;0;444;0;1;0;58984;183942
+HN-HGJ-090;M;53;Oropharynx;T2;N2a;M0;stage IVA;+;0;42;41;56;-265;chemo radiation;1;817;0;0;0;2821;8797
+HN-HGJ-091;M;65;Oropharynx;T3;N0;M0;stage III;+;0;35;34;54;96;chemo radiation;0;719;0;0;0;22959;71597
+HN-HGJ-092;M;53;Oropharynx;T2;N1;M0;stage III;+;0;63;62;82;121;chemo radiation;1;824;0;0;0;10068;31397
+HN-HMR-001;M;54;Oropharynx;T4a;N2c;M0;stage IVA;N/A;0;19;48;68;113;chemo radiation;N/A;699;1;0;1;12030;73530
+HN-HMR-002;M;56;Hypopharynx;T4b;N2c;M0;stage IVB;N/A;0;-9;20;39;88;chemo radiation;N/A;194;0;1;1;18448;112759
+HN-HMR-003;M;82;Nasopharynx;T4;N0;M0;stage IVA;N/A;0;34;71;83;133;chemo radiation;N/A;666;1;0;1;6194;37859
+HN-HMR-004;M;66;Oropharynx;T2;N2c;M0;stage IVA;N/A;0;17;48;67;116;chemo radiation;N/A;2007;0;0;0;9494;29607
+HN-HMR-005;M;67;Oropharynx;T4a;N2b;M0;stage IVA;N/A;0;42;81;102;151;chemo radiation;N/A;1964;0;1;1;47579;148375
+HN-HMR-006;M;62;Nasopharynx;T3;N3b;M0;stage IVB;N/A;0;101;109;127;175;chemo radiation;N/A;1164;0;1;0;6368;19858
+HN-HMR-007;M;52;Oropharynx;T2;N0;M0;Stage III;N/A;0;21;43;62;106;radiation;N/A;1793;0;0;0;1981;6177
+HN-HMR-008;F;75;Hypopharynx;T2;N2c;M0;Stage IVA;N/A;0;32;49;67;112;chemo radiation;N/A;895;0;0;1;4779;14903
+HN-HMR-009;M;66;Nasopharynx;T1;N1;M0;Stage IIB;N/A;0;11;50;70;116;radiation;N/A;2136;0;0;0;5073;15820
+HN-HMR-010;M;79;Larynx;T3;N0;M0;Stage III;N/A;0;41;42;61;105;chemo radiation;N/A;2113;0;0;0;3496;10902
+HN-HMR-011;M;76;Oropharynx;T2;N3;M0;stage IVB;N/A;0;20;40;54;101;chemo radiation;N/A;670;0;1;1;40534;126405
+HN-HMR-012;M;81;Oropharynx;T2;N0;M0;Stage II;N/A;0;-3;50;67;110;radiation;N/A;713;0;0;1;1433;8758
+HN-HMR-013;M;76;Oropharynx;T2;N2b;M0;Stage IVA;N/A;0;41;50;69;118;chemo radiation;N/A;1534;0;0;0;2767;16912
+HN-HMR-014;M;68;Oropharynx;Tx;N2b;M0;Stage IVA;N/A;0;40;36;54;99;chemo radiation;N/A;1602;0;0;0;6285;19599
+HN-HMR-015;M;65;Hypopharynx;T2;N0;M0;Stage II;N/A;0;51;66;87;133;radiation;N/A;2003;1;0;0;4842;15098
+HN-HMR-016;F;71;Oropharynx;T4a;N2c;M0;Stage IVA;N/A;0;-1;17;34;79;chemo radiation;N/A;1562;0;0;0;36367;113410
+HN-HMR-017;M;73;Larynx;T2;N1;M0;Stage III;N/A;0;36;46;61;106;radiation;N/A;776;0;0;0;1211;3776
+HN-HMR-018;M;66;Hypopharynx;T3;N2c;M0;Stage IVA;N/A;0;87;100;118;168;radiation;N/A;1344;0;0;1;11484;35812
+HN-HMR-019;F;60;Larynx;T2;N2c;M0;Stage IVA;N/A;0;57;69;84;131;chemo radiation;N/A;2121;0;0;0;1940;6049
+HN-HMR-020;M;62;Oropharynx;T2;N2b;M0;Stage IVA;N/A;0;23;28;49;94;chemo radiation;N/A;1184;0;0;0;5075;15826
+HN-HMR-021;M;63;Oropharynx;T4;N2b;M0;Stage IVA;N/A;0;28;36;54;103;chemo radiation;N/A;686;0;1;1;4662;14538
+HN-HMR-022;M;68;Larynx;T3;N2c;M0;Stage IVA;N/A;0;23;35;48;94;chemo radiation;N/A;731;1;0;0;6443;20092
+HN-HMR-023;M;51;Oropharynx;T4;N2c;M0;Stage IVA;N/A;0;3;18;36;84;chemo radiation;N/A;1633;0;0;0;18561;57882
+HN-HMR-024;F;64;Oropharynx;T3;N2c;M0;Stage IVA;N/A;0;60;78;94;141;chemo radiation;N/A;1937;0;0;0;13218;41220
+HN-HMR-025;m;58;Oropharynx;T4;N2b;M0;Stage IVA;+;0;8;16;34;82;chemo radiation;N/A;1106;0;0;0;14662;45723
+HN-HMR-026;M;60;Hypopharynx;T4b;N2c;M0;stage IVB;N/A;0;-29;-5;13;58;chemo radiation;N/A;426;0;1;1;1074;3349
+HN-HMR-027;M;58;Nasopharynx;T3;N1;M0;Stage III;N/A;0;16;18;69;115;chemo radiation;N/A;918;0;1;1;23598;73590
+HN-HMR-028;M;73;Oropharynx;T4;N2c;M0;Stage IVA;N/A;0;-8;52;72;121;chemo radiation;N/A;491;0;0;1;24054;147025
+HN-HMR-029;M;57;Oropharynx;T2;N2b;M0;Stage IVA;+;0;42;43;57;106;chemo radiation;N/A;1842;0;0;0;5668;17675
+HN-HMR-030;M;70;Oropharynx;T2;N2b;M0;Stage IVA;N/A;0;-202;-181;-161;-116;chemo radiation;N/A;1269;0;0;0;7331;22861
+HN-HMR-031;F;83;Hypopharynx;T3;N1;M0;Stage III;N/A;0;49;62;83;128;chemo radiation;N/A;1492;1;1;1;8816;27492
+HN-HMR-032;F;53;Hypopharynx;T4b;N2c;M0;stage IVB;N/A;0;12;31;39;84;chemo radiation;N/A;321;1;1;1;30305;94506
+HN-HMR-033;M;80;Larynx;T3;N2c;M0;stage IVB;N/A;0;25;46;62;110;chemo radiation;N/A;531;0;0;1;5055;30897
+HN-HMR-034;F;85;Oropharynx;T2;N2b;M0;Stage IVA;N/A;0;24;41;59;150;chemo radiation;N/A;1720;0;0;0;4239;13219
+HN-HMR-035;M;77;Larynx;T3;N3;M0;Stage IVA;N/A;0;61;106;121;169;radiation;N/A;624;1;0;1;6327;19730
+HN-HMR-036;M;71;Larynx;T2;N2b;M0;Stage IVA;N/A;0;63;87;111;156;chemo radiation;N/A;1850;0;0;0;1123;3501
+HN-HMR-037;F;49;Nasopharynx;T2;N3b;M0;stage IVB;N/A;0;36;44;56;101;chemo radiation;N/A;585;0;1;1;11557;70639
+HN-HMR-038;M;70;Larynx;T2;N2b;M0;Stage IVA;N/A;0;43;35;54;96;chemo radiation;N/A;585;1;0;1;1835;5722
+HN-HMR-039;M;61;Nasopharynx;T1;N3b;M0;stage IVB;N/A;0;26;49;67;112;chemo radiation;N/A;255;1;1;1;53414;166572
+HN-HMR-040;F;61;Oropharynx;T4;N2c;M0;Stage IVA;N/A;0;54;41;66;114;chemo radiation;N/A;1468;0;0;0;8389;26161
+HN-HMR-041;F;62;Larynx;T2;N2;M0;Stage IVA;N/A;0;38;33;47;95;chemo radiation;N/A;668;0;0;0;2747;16790
+HN-CHUS-001;M;66;Larynx;T2;N0;M0;Stade II;N/A;0;41;41;59;109;radiation;N/A;2442;0;0;0;691;2846
+HN-CHUS-002;M;66;Larynx;T2;N0;M0;Stade II;N/A;0;34;TBD;48;97;radiation;N/A;2841;0;0;0;1300;5355
+HN-CHUS-003;F;51;Oropharynx;T2;N0;M0;Stade II;N/A;0;81;81;96;133;radiation;N/A;2474;1;0;1;726;2991
+HN-CHUS-004;F;56;Oropharynx;T2;N1;M0;Stade III;N/A;0;27;27;41;62;chemo radiation;N/A;793;0;0;0;1389;5722
+HN-CHUS-005;M;63;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;29;TBD;48;100;chemo radiation;N/A;2165;0;0;0;7628;31426
+HN-CHUS-006;F;69;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;21;21;38;90;chemo radiation;N/A;880;0;0;0;5331;21963
+HN-CHUS-007;F;65;Oropharynx;T3;N1;M0;Stade III;N/A;0;33;33;53;106;chemo radiation;N/A;607;0;1;1;4482;18465
+HN-CHUS-008;M;70;Oropharynx;T3;N0;M0;Stade III;N/A;0;53;53;80;131;radiation;N/A;2378;0;0;0;437;1800
+HN-CHUS-009;F;65;Oropharynx;T2;N0;M0;Stade II;N/A;0;27;27;40;87;radiation;N/A;2616;0;0;0;3331;13723
+HN-CHUS-010;M;70;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;16;16;41;94;chemo radiation;N/A;1658;0;0;0;1696;4658
+HN-CHUS-011;F;63;Larynx;T2;N0;M0;Stade II;N/A;0;26;26;40;93;radiation;N/A;2571;0;0;0;1796;4932
+HN-CHUS-012;M;72;Larynx;T2;N0;M0;Stade II;N/A;0;37;37;51;100;radiation;N/A;504;1;0;0;175;480
+HN-CHUS-013;M;58;Oropharynx;T3;N2;M0;Stade IVA;N/A;0;72;72;98;149;chemo radiation;N/A;1982;0;0;1;3271;8984
+HN-CHUS-014;M;70;Nasopharynx;T1;N2;M0;Stade III;N/A;0;34;34;57;106;chemo radiation;N/A;1597;0;0;0;4845;13307
+HN-CHUS-015;F;78;Oropharynx;T1;N0;M0;Stade I;N/A;0;42;42;57;107;radiation;N/A;1975;0;0;0;1226;3367
+HN-CHUS-016;M;67;Oropharynx;T3;N0;M0;Stade III;N/A;0;20;20;34;85;chemo radiation;N/A;2506;0;0;0;3897;10703
+HN-CHUS-017;M;57;Larynx;T3;N0;M0;Stade III;N/A;0;21;21;35;86;chemo radiation;N/A;1707;0;0;0;6543;17970
+HN-CHUS-018;M;57;Larynx;T3;N0;M0;Stade III;N/A;0;22;22;36;86;chemo radiation;N/A;2393;0;0;0;2326;6388
+HN-CHUS-019;F;64;Oropharynx;T4b;N2;M0;Stade IVB;N/A;0;33;33;53;102;chemo radiation;N/A;1739;0;0;0;4290;11782
+HN-CHUS-020;M;54;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;24;24;41;91;chemo radiation;N/A;2218;0;0;0;3978;10925
+HN-CHUS-021;M;56;Oropharynx;T3;N2;M0;Stade IVA;N/A;0;58;58;72;126;chemo radiation;N/A;1277;0;1;0;9743;26759
+HN-CHUS-022;M;67;Oropharynx;T4a;N0;M0;Stade IVA;N/A;0;31;31;74;126;radiation;N/A;907;0;0;1;11338;31140
+HN-CHUS-023;M;81;Larynx;T3;N1;M0;Stade III;N/A;0;36;36;55;106;radiation;N/A;1672;1;0;1;1381;3793
+HN-CHUS-024;M;59;Larynx;T4a;N0;M0;Stade IVA;N/A;0;60;60;73;124;chemo radiation;N/A;2183;0;0;1;1039;2853
+HN-CHUS-025;M;75;Nasopharynx;T4;N1;M0;Stade IVA;N/A;0;28;28;50;91;chemo radiation;N/A;1519;0;0;1;14259;39163
+HN-CHUS-026;M;53;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;33;33;81;120;chemo radiation;N/A;1943;0;0;0;2957;8121
+HN-CHUS-027;M;52;Oropharynx;T4a;N2;M0;Stade IVA;N/A;0;70;70;88;139;chemo radiation;N/A;1174;0;0;0;11779;32351
+HN-CHUS-028;F;63;Oropharynx;T2;N0;M0;Stade II;N/A;0;34;34;54;97;radiation;N/A;1504;0;1;0;5122;4787
+HN-CHUS-029;F;63;Larynx;T3;N0;M0;Stade III;N/A;0;34;34;57;106;chemo radiation;N/A;2001;0;0;0;1931;5303
+HN-CHUS-030;M;77;Oropharynx;T2;N0;M0;Stade II;N/A;0;46;46;72;115;radiation;N/A;1137;0;0;1;2903;7973
+HN-CHUS-031;M;65;Oropharynx;T3;N0;M0;Stade III;N/A;0;23;23;45;98;radiation;N/A;2107;0;0;0;3395;9324
+HN-CHUS-032;M;59;Larynx;T3;N2;M0;Stade IVA;N/A;0;27;27;55;105;chemo radiation;N/A;1952;0;0;0;8058;22131
+HN-CHUS-033;M;71;Oropharynx;T1;N2;M0;Stade IVA;N/A;0;28;TBD;48;93;chemo radiation;N/A;1315;0;0;0;1659;6834
+HN-CHUS-034;M;71;Larynx;T4a;N0;M0;Stade IVA;N/A;0;40;40;67;119;chemo radiation;N/A;1949;0;0;0;3802;15663
+HN-CHUS-035;M;53;Oropharynx;T2;N3;M0;Stade IVB;N/A;0;35;35;58;108;chemo radiation;N/A;970;0;0;1;2160;8898
+HN-CHUS-036;F;35;Oropharynx;T2;N0;M0;Stade II;-;0;34;34;53;102;chemo radiation;N/A;1824;0;0;0;2982;12285
+HN-CHUS-037;M;51;Larynx;T3;N2;M0;Stade IVA;N/A;0;49;49;76;129;chemo radiation;N/A;1452;0;1;1;2153;8870
+HN-CHUS-038;M;68;Oropharynx;T4a;N2;M0;Stade IVA;N/A;0;39;39;60;121;chemo radiation;N/A;1936;0;0;0;10537;43411
+HN-CHUS-039;M;73;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;37;37;56;109;chemo radiation;N/A;1332;1;1;1;14497;59725
+HN-CHUS-040;F;76;Oropharynx;T1;N2;M0;Stade IVA;N/A;0;30;30;41;94;radiation;N/A;1651;0;0;0;3421;14094
+HN-CHUS-041;M;58;Oropharynx;T3;N2b;M0;Stade IVA;-;0;2;2;19;72;chemo radiation;N/A;1836;1;0;0;14849;61175
+HN-CHUS-042;M;57;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;20;20;45;91;chemo radiation;N/A;1728;0;0;0;1339;5516
+HN-CHUS-043;M;34;Oropharynx;T3;N3;M0;Stade IVB;-;0;8;8;118;79;chemo radiation;N/A;1735;0;0;0;13543;55795
+HN-CHUS-044;M;70;Larynx;T3;N0;M0;Stade III;-;0;57;57;83;127;chemo radiation;N/A;1760;1;0;0;3546;14609
+HN-CHUS-045;F;63;Oropharynx;T3;N2;M0;Stade IVA;+;0;27;27;46;89;chemo radiation;N/A;1548;0;0;0;17042;70210
+HN-CHUS-046;M;69;Oropharynx;T2;N0;M0;Stade II;+;0;29;29;47;89;radiation;N/A;1696;0;0;0;1230;5067
+HN-CHUS-047;F;74;Oropharynx;T2;N1;M0;Stade III;N/A;0;42;42;72;115;chemo radiation;N/A;1618;0;0;0;2816;11601
+HN-CHUS-048;F;50;Oropharynx;T4b;N2;M0;Stade IVB;N/A;0;38;38;52;98;chemo radiation;N/A;1546;0;0;0;2893;11918
+HN-CHUS-049;F;80;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;40;40;54;106;chemo radiation;N/A;1148;1;0;1;4416;18193
+HN-CHUS-050;F;52;Oropharynx;T2;N0;M0;Stade II;+;0;57;57;77;122;radiation;N/A;1556;0;0;0;940;3872
+HN-CHUS-051;M;76;Oropharynx;T3;N0;M0;Stade III;N/A;0;63;63;74;118;radiation;N/A;495;1;0;0;2165;8919
+HN-CHUS-052;M;58;Oropharynx;T4a;N2;M0;Stade IVA;N/A;0;45;45;62;107;chemo radiation;N/A;1588;0;0;0;17868;73613
+HN-CHUS-053;F;74;Oropharynx;T4b;N0;M0;Stade IVB;N/A;0;43;43;62;112;chemo radiation;N/A;245;1;0;1;5057;20834
+HN-CHUS-054;M;78;Larynx;T3;N0;M0;Stade III;N/A;0;47;47;69;118;radiation;N/A;650;1;0;0;6556;27009
+HN-CHUS-055;M;63;Oropharynx;T3;N2;M0;Stade IVA;N/A;0;14;14;29;78;chemo radiation;N/A;1083;0;0;1;4334;17855
+HN-CHUS-056;M;66;Oropharynx;T3;N0;M0;Stade III;N/A;0;16;16;84;150;chemo radiation;N/A;948;0;0;0;14550;59944
+HN-CHUS-057;M;58;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;30;30;41;452;chemo radiation;N/A;1540;0;0;0;3935;16211
+HN-CHUS-058;F;68;Oropharynx;T1;N2;M0;Stade IVA;N/A;0;33;33;53;110;chemo radiation;N/A;1533;0;0;0;783;3225
+HN-CHUS-059;M;79;Nasopharynx;T3;N2;M0;Stade IVA;N/A;0;17;17;35;84;radiation;N/A;528;1;1;1;5878;24216
+HN-CHUS-060;M;48;Oropharynx;T4a;N2;M0;Stade IVA;-;0;29;29;56;107;chemo radiation;N/A;1527;0;0;0;5805;23915
+HN-CHUS-061;M;54;Oropharynx;T2;N2;M0;Stade IVA;+;0;27;27;48;458;chemo radiation;N/A;1436;0;0;0;7750;31929
+HN-CHUS-062;M;75;Larynx;T3;N1;M0;Stade III;N/A;0;42;42;61;100;radiation;N/A;1521;0;0;0;4870;20063
+HN-CHUS-063;F;63;Larynx;T3;N0;M0;Stade III;N/A;0;23;23;42;85;chemo radiation;N/A;1478;0;0;0;1958;8066
+HN-CHUS-064;M;66;Oropharynx;T2;N0;M0;Stade II;+;0;33;33;47;96;radiation;N/A;1487;0;0;0;965;3975
+HN-CHUS-065;M;65;Oropharynx;T2;N0;M0;Stade II;+;0;35;35;51;106;radiation;N/A;1429;0;0;0;8448;23203
+HN-CHUS-066;M;62;Oropharynx;T2;N2;M0;Stade IVA;+;0;-20;-20;21;65;radiation;N/A;1430;0;0;0;3644;15012
+HN-CHUS-067;M;72;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;30;30;43;93;chemo radiation;N/A;1340;0;0;0;1540;6344
+HN-CHUS-068;M;62;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;41;41;69;119;chemo radiation;N/A;1387;0;0;0;3344;9184
+HN-CHUS-069;F;48;Oropharynx;T2;N2;M0;Stade IVA;N/A;0;30;30;48;98;chemo radiation;N/A;1330;0;0;0;1530;6303
+HN-CHUS-070;M;77;Larynx;T2;N0;M0;Stade II;N/A;0;22;22;37;66;radiation;N/A;834;0;0;0;169;696
+HN-CHUS-071;M;81;Larynx;T3;N0;M0;Stade III;N/A;0;27;27;50;94;chemo radiation;N/A;1182;0;0;0;990;4078
+HN-CHUS-072;M;53;Larynx;T1;N0;M0;Stade I;N/A;0;60;60;77;124;radiation;N/A;451;0;0;0;876;3609
+HN-CHUS-073;M;77;Oropharynx;T2;N2;M0;Stade IVA;+;0;22;22;49;94;chemo radiation;N/A;1401;0;0;0;1598;6583
+HN-CHUS-074;M;62;Oropharynx;T2;N2;M0;Stade IVA;+;0;15;15;34;77;chemo radiation;N/A;1158;0;0;0;2194;9039
+HN-CHUS-075;M;60;Larynx;T1;N0;M0;Stade I;N/A;0;35;35;50;83;radiation;N/A;1324;1;0;0;549;2261
+HN-CHUS-076;M;66;Oropharynx;T3;N2;M0;Stade IVA;+;0;38;38;56;98;chemo radiation;N/A;396;0;1;1;5495;22638
+HN-CHUS-077;F;41;Oropharynx;T4a;N2;M0;Stade IVA;-;0;29;29;44;88;chemo radiation;N/A;518;1;0;1;7526;31006
+HN-CHUS-078;M;57;Oropharynx;T2;N2;M0;Stade IVA;+;0;28;28;74;121;chemo radiation;N/A;1201;0;0;0;5996;24702
+HN-CHUS-080;F;53;Oropharynx;T2;N2;M0;Stade IVA;+;0;48;48;62;108;chemo radiation;N/A;1211;0;0;0;4247;17497
+HN-CHUS-081;F;57;Oropharynx;T4a;N1;M0;Stade IVA;+;0;30;30;43;88;chemo radiation;N/A;1137;0;0;0;10090;41569
+HN-CHUS-082;F;81;Nasopharynx;T4;N0;M0;Stade IVA;N/A;0;29;29;43;87;radiation;N/A;1270;0;0;0;7609;31348
+HN-CHUS-083;M;71;Oropharynx;T2;N2;M0;Stade IVA;+;0;35;35;50;95;chemo radiation;N/A;1019;0;0;0;6524;26878
+HN-CHUS-084;F;88;Larynx;T3;N0;M0;Stade III;-;0;43;43;61;100;radiation;N/A;1148;0;0;0;778;3205
+HN-CHUS-085;M;60;Oropharynx;T2;N2;M0;Stade IVA;+;0;28;28;54;97;chemo radiation;N/A;1120;0;0;0;2559;10542
+HN-CHUS-086;M;52;Oropharynx;T4a;N2;M0;Stade IVA;-;0;46;TBD;60;106;chemo radiation;N/A;1030;0;0;0;10751;44292
+HN-CHUS-087;M;60;Oropharynx;T3;N0;M0;Stade III;+;0;27;27;41;87;chemo radiation;N/A;1099;0;0;0;15246;62811
+HN-CHUS-088;F;77;Oropharynx;T2;N2;M0;Stade IVA;+;0;31;31;48;93;chemo radiation;N/A;1126;0;0;0;6002;24727
+HN-CHUS-089;M;65;Oropharynx;T1;N2;M0;Stade IVA;+;0;-13;TBD;41;89;chemo radiation;N/A;991;0;0;0;5921;24393
+HN-CHUS-090;M;71;Oropharynx;T2;N2;M0;Stade IVA;+;0;36;36;51;98;chemo radiation;N/A;1077;0;0;0;2685;11061
+HN-CHUS-091;M;61;Oropharynx;T2;N2;M0;Stade IVA;+;0;28;28;46;92;chemo radiation;N/A;1023;0;0;0;1524;6278
+HN-CHUS-092;M;57;Nasopharynx;T2;N1;M0;Stade II;-;0;21;21;42;88;chemo radiation;N/A;898;0;0;0;4298;17707
+HN-CHUS-093;M;64;Nasopharynx;T4a;N1;M0;Stade IVA;-;0;9;TBD;63;109;chemo radiation;N/A;1001;0;0;0;3486;14361
+HN-CHUS-094;M;59;Oropharynx;T2;N0;M0;Stade II;+;0;24;24;42;87;radiation;N/A;781;0;0;0;2809;11572
+HN-CHUS-095;M;75;Oropharynx;T1;N2;M0;Stade IVA;-;0;50;50;69;111;radiation;N/A;993;0;0;0;898;3699
+HN-CHUS-096;M;67;Oropharynx;T2;N1;M0;Stade III;+;0;35;TBD;54;99;radiation;N/A;904;0;0;0;3905;16088
+HN-CHUS-097;M;75;Oropharynx;T3;N3;M0;Stade IVB;+;0;27;27;39;84;chemo radiation;N/A;934;0;0;0;6855;28241
+HN-CHUS-098;M;61;Oropharynx;T3;N2;M0;Stade IVA;+;0;47;47;61;106;chemo radiation;N/A;815;0;0;0;30372;125128
+HN-CHUS-099;M;53;Larynx;T3;N2;M0;Stade IVA;N/A;0;44;TBD;70;115;chemo radiation;N/A;580;0;1;1;5991;24682
+HN-CHUS-100;M;62;Oropharynx;T4a;N2;M0;Stade IVA;+;0;23;TBD;54;93;chemo radiation;N/A;462;0;1;0;19013;104797
+HN-CHUS-101;M;51;Oropharynx;T3;N2;M0;Stade IVA;-;0;73;TBD;91;136;chemo radiation;N/A;499;1;1;0;3304;22686
+HN-CHUS-102;F;68;Hypopharynx;T2;N0;M0;Stade II;-;0;23;TBD;37;78;radiation;N/A;468;1;0;0;1306;8967
