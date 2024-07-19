@@ -27,7 +27,7 @@ To train/validate/test the model you can use docker (the necessary docker images
 
 Docker images:
 - FSL official image: `vistalab/fsl-v5.0`
-- Custom docker image for pre-processing and training the network: `pmateus/hn-cnn:1.3.0`
+- Custom docker image for pre-processing and training the network: `pmateus/hn-cnn:1.4.0`
 
 It's also possible to configure a local environment without using docker, directly install the necessary dependencies using the `requirements.txt` file.
 
@@ -177,7 +177,7 @@ random.seed(7651962)
 random_seed_split = random.randint(0, 9174937)
 torch.manual_seed(775135)
 # Gives the same result:
-data = np.random.rand(4, 4)
+data = torch.randn(4, 4)
 # Gives different results:
 dp1 = nn.Dropout(p=0.3)
 dp1(data)
