@@ -26,7 +26,7 @@ def get_training_augmentation(augment = {}):
     print(augmentations)
     return transforms.Compose([
         #transforms.Grayscale(num_output_channels=1),
-        transforms.RandomHorizontalFlip(p=augmentations[HORIZONTAL_FLIP]) ,
+        transforms.RandomHorizontalFlip(p=augmentations[HORIZONTAL_FLIP]),
         transforms.RandomVerticalFlip(p=augmentations[VERTICAL_FLIP]),
         transforms.RandomApply([
             transforms.Lambda(rotate90),
