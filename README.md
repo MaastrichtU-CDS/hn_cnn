@@ -167,6 +167,32 @@ torch.manual_seed()
 Finally, the scripts provided in the folder `/data/models` already include all the necessary configurations 
 to reproduce our results for the prediction of each outcome.
 
+We've trained the network in [DSRI](dsri.maastrichtuniversity.nl), an openshift cluster of servers. Although 
+we provide the seeds and scripts to reproduce the results, inconsistencies may occur in certain machines. 
+We observed that some systems differ when executing the `torch.nn.Dropout` function (using the same seeds):
+```python
+import random
+import torch
+random.seed(7651962)
+random_seed_split = random.randint(0, 9174937)
+torch.manual_seed(775135)
+# Gives the same result:
+data = np.random.rand(4, 4)
+# Gives different results:
+dp1 = nn.Dropout(p=0.3)
+dp1(data)
+```
+
+Setting up the following confirations did not change the behavior. The `Dropout` function still provided different 
+results.
+```python
+device = torch.device("cpu")
+torch.backends.cudnn.deterministic = True
+torch.set_num_threads(1)
+```
+
+Using our own implementation of `Dropout` seems to resolve the problem.
+
 ## Results
 
 Performance results using only imaging data:
