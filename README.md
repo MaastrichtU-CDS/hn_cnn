@@ -5,6 +5,7 @@ Image based prognosis in head and neck cancer using convolutional neural network
 - [Convolutional Neural Network (CNN) for head and neck outcome classification](#convolutional-neural-network-cnn-for-head-and-neck-outcome-classification)
   - [Description](#description)
   - [Requirements](#requirements)
+  - [Notes](#notes)
   - [Data pre-processing](#data-pre-processing)
   - [Running the model](#running-the-model)
     - [Example](#example)
@@ -27,9 +28,14 @@ To train/validate/test the model you can use docker (the necessary docker images
 
 Docker images:
 - FSL official image: `vistalab/fsl-v5.0`
-- Custom docker image for pre-processing and training the network: `pmateus/hn-cnn:1.4.0`
+- Custom docker image for pre-processing and training the network: `pmateus/hn-cnn:1.5.0`
 
 It's also possible to configure a local environment without using docker, directly install the necessary dependencies using the `requirements.txt` file.
+
+## Notes
+
+Due to vulnerabilities in the dependencies, we updated the versions starting with release `pmateus/hn-cnn:1.5.0`.
+The information on the original versions and code can be found in the release for version `1.4.0` (and on the branch `reproduece`).
 
 ## Data pre-processing
 

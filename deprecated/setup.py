@@ -22,16 +22,16 @@ setup(
     long_description_content_type='text/markdown',
     url='https://github.com/pedro-cmat/hn_cnn',
     packages=find_packages(),
-    python_requires='>=3.9',
+    python_requires='>=3.8',
     install_requires=[
-        'numpy==1.22.0',
+        'numpy==1.21.4',
         'pandas==1.3.4',
-        'Pillow==10.3.0',
-        'scikit-learn==1.5.0',
+        'Pillow==8.4.0',
+        'scikit-learn==1.0.1',
         'scipy==1.7.3',
-        'torch==1.13.1',
+        'torch==1.10.0',
         'torchsummary==1.5.1',
-        'torchvision==0.14.1'
+        'torchvision==0.11.1'
     ]
     # ,
     # extras_require={
