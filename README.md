@@ -187,6 +187,15 @@ data = torch.randn(4, 4)
 # Gives different results:
 dp1 = nn.Dropout(p=0.3)
 dp1(data)
+# tensor([[-1.0361, -3.5810, -1.1379,  1.8477],
+#         [-0.0000, -1.2687, -0.0000,  1.7217],
+#         [-1.4952, -2.3690, -0.0955, -0.0000],
+#         [-0.4844,  1.5011,  1.8367,  2.3154]])
+# vs
+# tensor([[-1.0361, -0.0000, -0.0000,  1.8477],
+#         [-2.0117, -1.2687, -0.0785,  0.0000],
+#         [-0.0000, -2.3690, -0.0955, -0.0000],
+#         [-0.4844,  1.5011,  1.8367,  2.3154]])
 ```
 
 Setting up the following confirations did not change the behavior. The `Dropout` function still provided different 
@@ -198,6 +207,11 @@ torch.set_num_threads(1)
 ```
 
 Using our own implementation of `Dropout` seems to resolve the problem.
+x = torch.ones(10, 20)
+p = 0.5
+mask = torch.distributions.Bernoulli(probs=(1-p)).sample(x.size())
+x[~mask.bool()] = x.mean()
+out = x * mask * 1/(1-p)
 
 ## Results
 
