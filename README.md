@@ -35,7 +35,7 @@ It's also possible to configure a local environment without using docker, direct
 ## Notes
 
 Due to vulnerabilities in the dependencies, we updated the versions starting with release `pmateus/hn-cnn:1.5.0`.
-The information on the original versions and code can be found in the release for version `1.4.0` (and on the branch `reproduece`).
+The information on the original versions and code can be found in the release for version `1.4.0` (and on the branch `reproduce`).
 
 ## Data pre-processing
 
