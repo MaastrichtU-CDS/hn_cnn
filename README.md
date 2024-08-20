@@ -175,7 +175,10 @@ to reproduce our results for the prediction of each outcome.
 
 We've trained the network in [DSRI](dsri.maastrichtuniversity.nl), an openshift cluster of servers. Although 
 we provide the seeds and scripts to reproduce the results, inconsistencies may occur in certain machines. 
-We observed that some systems differ when executing the `torch.nn.Dropout` function (using the same seeds):
+We observed that some systems differ when executing the `torch.nn.Dropout` function (using the same seeds).
+From experiments with different machines, we think this is caused by different CPU architecture. To obtain 
+the same results that we provide, you should use a CPU with an ARM architecture ( tested in AWS with 
+an Ubuntu 24.04 LTS image and a t4g.micro 64-bit ARM CPU).
 ```python
 import random
 import torch
@@ -185,13 +188,16 @@ torch.manual_seed(775135)
 # Gives the same result:
 data = torch.randn(4, 4)
 # Gives different results:
-dp1 = nn.Dropout(p=0.3)
+dp1 = torch.nn.Dropout(p=0.3)
 dp1(data)
+# Original experiments in DSRI (also works in AWS with an 
+# ARM architecture)
 # tensor([[-1.0361, -3.5810, -1.1379,  1.8477],
 #         [-0.0000, -1.2687, -0.0000,  1.7217],
 #         [-1.4952, -2.3690, -0.0955, -0.0000],
 #         [-0.4844,  1.5011,  1.8367,  2.3154]])
 # vs
+# x86 architecture
 # tensor([[-1.0361, -0.0000, -0.0000,  1.8477],
 #         [-2.0117, -1.2687, -0.0785,  0.0000],
 #         [-0.0000, -2.3690, -0.0955, -0.0000],
