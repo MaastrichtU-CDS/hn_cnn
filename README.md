@@ -204,21 +204,22 @@ dp1(data)
 #         [-0.4844,  1.5011,  1.8367,  2.3154]])
 ```
 
-Setting up the following confirations did not change the behavior. The `Dropout` function still provided different 
-results.
+Setting up the following configurations did not change the behavior. The `Dropout` function still provided different 
+results:
 ```python
 device = torch.device("cpu")
 torch.backends.cudnn.deterministic = True
 torch.set_num_threads(1)
 ```
 
-Using our own implementation of `Dropout` seems to resolve the problem.
+Using our own implementation of `Dropout` can be an option to avoid this problem in the future:
+```python
 x = torch.ones(10, 20)
 p = 0.5
 mask = torch.distributions.Bernoulli(probs=(1-p)).sample(x.size())
 x[~mask.bool()] = x.mean()
 out = x * mask * 1/(1-p)
-
+```
 ## Results
 
 Performance results using only imaging data:
