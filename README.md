@@ -12,7 +12,7 @@ Image based prognosis in head and neck cancer using convolutional neural network
     - [Data split](#data-split)
     - [Training](#training)
     - [Clinical Data](#clinical-data)
-    - [Reproducibility](#reproducibility)
+  - [Reproducibility](#reproducibility)
   - [Results](#results)
   - [Citation](#citation)
 
@@ -153,7 +153,7 @@ file `parse_data.py`:
 ``` 
 If you change this set, make sure to also modify the number of neurons in the network accordingly (file `cnn.py`).
 
-### Reproducibility
+## Reproducibility
 
 The training scripts allow to set up the necessary seeds in order to make the results fully reproducible:
 - the random seed for python (`random.seed()`)

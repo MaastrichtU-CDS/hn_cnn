@@ -1,53 +1,53 @@
-certifi            2024.7.4
-charset-normalizer 3.3.2
-cleo               2.1.0
-click              8.0.3
-configparser       5.1.0
-crashtest          0.4.1
-dcmrtstruct2nii    1.0.19
-docker-pycreds     0.4.0
-gitdb              4.0.11
-GitPython          3.1.43
-hn-cnn             1.0.0
-idna               3.7
-imageio            2.14.1
-joblib             1.4.2
-networkx           3.1
-nibabel            3.2.1
-numpy              1.21.4
-packaging          24.1
-pandas             1.3.4
-pathtools          0.1.2
-Pillow             8.4.0
-pip                21.0.1
-promise            2.3
-protobuf           5.27.2
-psutil             6.0.0
-pydicom            2.4.4
-python-dateutil    2.9.0.post0
-pytz               2024.1
-PyWavelets         1.4.1
-PyYAML             6.0.1
-rapidfuzz          3.9.4
-requests           2.32.3
-scikit-image       0.19.3
-scikit-learn       1.0.1
-scipy              1.7.3
-sentry-sdk         2.10.0
-setuptools         54.2.0
-shortuuid          1.0.13
-SimpleITK          2.3.1
-six                1.16.0
-smmap              5.0.1
-subprocess32       3.5.4
-termcolor          2.4.0
-threadpoolctl      3.5.0
-tifffile           2023.7.10
-torch              1.10.0
-torchsummary       1.5.1
-torchvision        0.11.1
-typing-extensions  4.12.2
-urllib3            2.2.2
-wandb              0.12.7
-wheel              0.36.2
-yaspin             2.5.0
+certifi==2024.7.4
+charset-normalizer==3.3.2
+cleo==2.1.0
+click==8.0.3
+configparser==5.1.0
+crashtest==0.4.1
+dcmrtstruct2nii==1.0.19
+docker-pycreds==0.4.0
+gitdb==4.0.11
+GitPython==3.1.43
+hn-cnn==1.0.0
+idna==3.7
+imageio==2.14.1
+joblib==1.4.2
+networkx==3.1
+nibabel==3.2.1
+numpy==1.21.4
+packaging==24.1
+pandas==1.3.4
+pathtools==0.1.2
+Pillow==8.4.0
+pip==21.0.1
+promise==2.3
+protobuf==5.27.2
+psutil==6.0.0
+pydicom==2.4.4
+python-dateutil==2.9.0.post0
+pytz==2024.1
+PyWavelets==1.4.1
+PyYAML==6.0.1
+rapidfuzz==3.9.4
+requests==2.32.3
+scikit-image==0.19.3
+scikit-learn==1.0.1
+scipy==1.7.3
+sentry-sdk==2.10.0
+setuptools==54.2.0
+shortuuid==1.0.13
+SimpleITK==2.3.1
+six==1.16.0
+smmap==5.0.1
+subprocess32==3.5.4
+termcolor==2.4.0
+threadpoolctl==3.5.0
+tifffile==2023.7.10
+torch==1.10.0
+torchsummary==1.5.1
+torchvision==0.11.1
+typing-extensions==4.12.2
+urllib3==2.2.2
+wandb==0.12.7
+wheel==0.36.2
+yaspin==2.5.0
