@@ -58,7 +58,7 @@ if __name__ == '__main__':
                                 " -add".join([temporary_folder + id + f"/mask_{mask}_re.nii.gz" for mask in gtv_masks]),
                                 temporary_folder + id + f"/mask_{''.join(gtv_masks)}_re.nii.gz",
                             )
-                        )  
+                        )
                     # Subtract the mask
                     bash_command.append(
                         ' '.join(

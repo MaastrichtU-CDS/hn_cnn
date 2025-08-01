@@ -1,3 +1,6 @@
+# Convert the DICOM scans to NIFTI, identify the RT structures and
+# prints the FSL commands to re-orient and apply the masks.
+
 import csv
 import os
 
