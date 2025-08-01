@@ -42,13 +42,13 @@ CONFIGURATIONS = {
         #EPOCHS: 5,
     },
     BATCH_SIZE: 64,
-    LOGS_PATH: "./logs/log_os.txt",
+    LOGS_PATH: "/mnt/logs/log_os.txt",
     # Leave empty to train the network without clinical data
     CLINICAL_VARIABLES: [],
     DATA_AUGMENTATION: {},
     STORE_MODEL: {
         MODEL_ID: "os",
-        MODEL_PATH: "./backup",
+        MODEL_PATH: "/mnt/backup",
         THRESHOLD: 0.75,
         MAX_DIFFERENCE: 0.05,
     }

@@ -38,17 +38,17 @@ CONFIGURATIONS = {
     HYPERPARAMETERS: {
         # Include any hypeparameters that you want to change
         # from the default ones:
-        #LEARNING_RATE: 0.05,
-        #EPOCHS: 5,
+        # LEARNING_RATE: 0.05,
+        # EPOCHS: 5,
     },
     BATCH_SIZE: 64,
-    LOGS_PATH: "./logs/log_dm.txt",
+    LOGS_PATH: "/mnt/logs/log_dm.txt",
     # Leave empty to train the network without clinical data
     CLINICAL_VARIABLES: [],
     DATA_AUGMENTATION: {},
     STORE_MODEL: {
         MODEL_ID: "dm",
-        MODEL_PATH: "./backup",
+        MODEL_PATH: "/mnt/backup",
         THRESHOLD: 0.8,
         MAX_DIFFERENCE: 0.03,
     }
