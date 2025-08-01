@@ -56,10 +56,12 @@ For step 3, 4, and 5, we provide the script `image_preprocesing/windowing_croppi
 
 The script './training.py' provides the base to train and evaluate the model under different configurations.
 To run the model, make sure to:
-- (Using Docker) Set the path to the data folder in the docker-compose file:
+- (Using Docker) Set the path to the data folder and to store the logs and backup in the docker-compose file:
 ```yaml
     volumes:
       - ./path/to/data:/mnt/data
+      - ./backup_models:/mnt/backup
+      - ./logs:/mnt/logs
 ```
 - Set the path for the training, validation, and testing sets in the './training.py' script (check the example script under './example'):
 ```python
