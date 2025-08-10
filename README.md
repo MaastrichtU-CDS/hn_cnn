@@ -179,7 +179,7 @@ torch.manual_seed()
 Finally, the scripts provided in the folder `/data/models` already include all the necessary configurations 
 to reproduce our results for the prediction of each outcome.
 
-We've trained the network in [DSRI](dsri.maastrichtuniversity.nl), an openshift cluster of servers. Although 
+We've trained the network in [DSRI](https://dsri.maastrichtuniversity.nl), an openshift cluster of servers. Although 
 we provide the seeds and scripts to reproduce the results, inconsistencies may occur in certain machines. 
 We observed that some systems differ when executing the `torch.nn.Dropout` function (using the same seeds).
 From experiments with different machines, we think this is caused by different CPU architecture. To obtain 
