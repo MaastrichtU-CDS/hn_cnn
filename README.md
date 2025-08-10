@@ -22,6 +22,8 @@ In this work, we evaluated the reproducility of proposed Convolutional Neural Ne
 As a result, we developed a less complex network based on previous work, trained and evaluated the performance for outcome prediction (distant metastasis, loco-regional failure and overall survival), and evaluated the impact of pre-processing the CT scans and the model selection method.
 In this repository, you'll find the necessary tools to train/validate/test the proposed model. Additionally, it also includes the necessary tools to reproduce the work by using the same seeds (./seed.xlsx).
 
+‼️In the meantime, we've updated the code and library versions (due to vulnerabilities). To recreate the environment used to train our model, use the docker image `pmateus/hn-cnn:1.4.0` and code version available in the branch `reproduce`.
+
 ## Requirements
 
 To train/validate/test the model you can use docker (the necessary docker images are available) and docker-compose. This avoids the need to configure a local environment and guarantees an equal environment to the one used while developing the network.
@@ -156,6 +158,8 @@ file `parse_data.py`:
 If you change this set, make sure to also modify the number of neurons in the network accordingly (file `cnn.py`).
 
 ## Reproducibility
+
+‼️In the meantime, we've updated the code and library versions (due to vulnerabilities). To recreate the environment used to train our model, use the docker image `pmateus/hn-cnn:1.4.0` and code version available in the branch `reproduce`.
 
 The training scripts allow to set up the necessary seeds in order to make the results fully reproducible:
 - the random seed for python (`random.seed()`)
