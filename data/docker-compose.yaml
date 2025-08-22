@@ -17,4 +17,5 @@ services:
       - ./training_example_dm.py:/mnt/training.py
       - ./logs_test:/mnt/logs
       - ./models_test:/mnt/models
+      - ./backup:/mnt/backup
     entrypoint: /bin/bash
