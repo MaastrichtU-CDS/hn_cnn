@@ -170,10 +170,10 @@ When reproducing the results from the manuscript (using the seeds provided in th
 please include the following in the training script (as exemplified in `/data/models/training_example_dm.py`):
 
 ```python
-random.seed()
+random.seed(python_seed)
 # Include the next line:
 random_seed_split = random.randint(0, 9174937)
-torch.manual_seed()
+torch.manual_seed(torch_seed)
 ```
 
 Finally, the scripts provided in the folder `/data/models` already include all the necessary configurations 
@@ -183,8 +183,9 @@ We've trained the network in [DSRI](https://dsri.maastrichtuniversity.nl), an op
 we provide the seeds and scripts to reproduce the results, inconsistencies may occur in certain machines. 
 We observed that some systems differ when executing the `torch.nn.Dropout` function (using the same seeds).
 From experiments with different machines, we think this is caused by different CPU architecture. To obtain 
-the same results that we provide, you should use a CPU with an ARM architecture ( tested in AWS with 
-an Ubuntu 24.04 LTS image and a t4g.micro 64-bit ARM CPU).
+the results that we obtained, you should use a CPU with an ARM architecture (tested in AWS with 
+an Ubuntu 24.04 LTS image and a t4g.micro 64-bit ARM CPU). Still, hardware differences can lead to 
+small floating-point discrepancies affecting the result.
 ```python
 import random
 import torch
