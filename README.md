@@ -13,7 +13,7 @@ Image based prognosis in head and neck cancer using convolutional neural network
     - [Training](#training)
     - [Clinical Data](#clinical-data)
   - [Reproducibility](#reproducibility)
-  - [Results](#results)
+  - [Results & Weights](#results)
   - [Citation](#citation)
 
 ## Description
@@ -222,7 +222,9 @@ mask = torch.distributions.Bernoulli(probs=(1-p)).sample(x.size())
 x[~mask.bool()] = x.mean()
 out = x * mask * 1/(1-p)
 ```
-## Results
+## Results & Weights
+
+The weights for the models are available under [./data/models](./data/models/)
 
 Performance results using only imaging data:
 
