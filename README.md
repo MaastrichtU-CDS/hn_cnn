@@ -22,6 +22,8 @@ In this work, we evaluated the reproducility of proposed Convolutional Neural Ne
 As a result, we developed a less complex network based on previous work, trained and evaluated the performance for outcome prediction (distant metastasis, loco-regional failure and overall survival), and evaluated the impact of pre-processing the CT scans and the model selection method.
 In this repository, you'll find the necessary tools to train/validate/test the proposed model. Additionally, it also includes the necessary tools to reproduce the work by using the same seeds (./seed.xlsx).
 
+‼️In the meantime, we've updated the code and library versions (due to vulnerabilities). To recreate the environment used to train our model, use the docker image `pmateus/hn-cnn:1.4.0` and code version available in the branch `reproduce`.
+
 ## Requirements
 
 To train/validate/test the model you can use docker (the necessary docker images are available) and docker-compose. This avoids the need to configure a local environment and guarantees an equal environment to the one used while developing the network.
@@ -157,6 +159,8 @@ If you change this set, make sure to also modify the number of neurons in the ne
 
 ## Reproducibility
 
+‼️In the meantime, we've updated the code and library versions (due to vulnerabilities). To recreate the environment used to train our model, use the docker image `pmateus/hn-cnn:1.4.0` and code version available in the branch `reproduce`.
+
 The training scripts allow to set up the necessary seeds in order to make the results fully reproducible:
 - the random seed for python (`random.seed()`)
 - the random seed for the data split, only necessary when performing cross-validation (`StratifiedKFold`)
@@ -166,21 +170,22 @@ When reproducing the results from the manuscript (using the seeds provided in th
 please include the following in the training script (as exemplified in `/data/models/training_example_dm.py`):
 
 ```python
-random.seed()
+random.seed(python_seed)
 # Include the next line:
 random_seed_split = random.randint(0, 9174937)
-torch.manual_seed()
+torch.manual_seed(torch_seed)
 ```
 
 Finally, the scripts provided in the folder `/data/models` already include all the necessary configurations 
 to reproduce our results for the prediction of each outcome.
 
-We've trained the network in [DSRI](dsri.maastrichtuniversity.nl), an openshift cluster of servers. Although 
+We've trained the network in [DSRI](https://dsri.maastrichtuniversity.nl), an openshift cluster of servers. Although 
 we provide the seeds and scripts to reproduce the results, inconsistencies may occur in certain machines. 
 We observed that some systems differ when executing the `torch.nn.Dropout` function (using the same seeds).
 From experiments with different machines, we think this is caused by different CPU architecture. To obtain 
-the same results that we provide, you should use a CPU with an ARM architecture ( tested in AWS with 
-an Ubuntu 24.04 LTS image and a t4g.micro 64-bit ARM CPU).
+the results that we obtained, you should use a CPU with an ARM architecture (tested in AWS with 
+an Ubuntu 24.04 LTS image and a t4g.micro 64-bit ARM CPU). Still, hardware differences can lead to 
+small floating-point discrepancies affecting the result.
 ```python
 import random
 import torch
